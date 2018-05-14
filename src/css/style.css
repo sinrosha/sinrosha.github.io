@@ -48,7 +48,7 @@ table {
 }
 
 .full-view {
-  background: linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)), url("../../assets/images/main-background.jpg") center center no-repeat;
+  background: linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../../assets/images/main-background.jpg") center center no-repeat;
   background-size: cover;
   height: 100vh;
   width: 100vw;
