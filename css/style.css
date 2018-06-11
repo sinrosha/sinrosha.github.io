@@ -1,0 +1,274 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 10px;
+  font-family: Lato, arial, sans-serif; }
+
+.container {
+  width: 85%;
+  margin: 0 auto; }
+
+.full-view {
+  position: relative; }
+
+header {
+  padding: 3em;
+  background: #000;
+  height: 10vh; }
+  header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    header .navbar .logo {
+      width: 50px; }
+      header .navbar .logo img {
+        width: 100%; }
+    header .navbar ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      display: none;
+      transition: all 1s; }
+      header .navbar ul li {
+        position: relative;
+        padding: 1em 0.6em;
+        margin: 0 2.4em; }
+        header .navbar ul li a {
+          text-decoration: none;
+          font-size: 1.4em;
+          padding: 0.6em 1.6em;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 600; }
+          header .navbar ul li a:before {
+            content: "";
+            position: absolute;
+            background: #00ffd4;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            transition: all 2s; }
+          header .navbar ul li a:after {
+            content: "";
+            position: absolute;
+            background: #00ffd4;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            transition: all 2s; }
+          header .navbar ul li a:hover:before {
+            width: 2px;
+            height: 2px;
+            width: 100%; }
+          header .navbar ul li a:hover:after {
+            width: 2px;
+            height: 2px;
+            width: 100%; }
+
+main {
+  height: 90vh;
+  background: #000; }
+  main .container {
+    height: 100%; }
+  main .question {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    height: 100%; }
+    main .question h1 {
+      color: #fff;
+      font-size: 6em;
+      margin-right: 0.3em;
+      position: relative; }
+    main .question .input {
+      position: relative; }
+      main .question .input:before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        color: #fff;
+        background: #00ffd4;
+        transition: all 1s linear; }
+      main .question .input:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 50%;
+        width: 0;
+        height: 0;
+        color: #fff;
+        background: #00ffd4;
+        transition: all 1s linear; }
+      main .question .input:hover:before {
+        width: 2px;
+        height: 2px;
+        width: 50%; }
+      main .question .input:hover:after {
+        width: 2px;
+        height: 2px;
+        width: 50%; }
+    main .question input[type="text"] {
+      font-size: 3em;
+      outline: 0;
+      border: 0;
+      color: #fff;
+      background: #000;
+      border-bottom: 2px solid #fff;
+      padding: 0.2em 0;
+      width: 8.8em;
+      transition: all 0.4s linear; }
+    main .question .enter {
+      margin-left: 2em;
+      position: relative; }
+    main .question a {
+      padding: 0.3em 0.6em 0.4em 0.6em;
+      color: #fff;
+      border: 1px solid #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      font-weight: 400;
+      opacity: 0.4;
+      transition: all 0.8s linear; }
+      main .question a:hover {
+        color: #000;
+        background: #fff;
+        opacity: 1; }
+  main .answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    height: 100%;
+    display: none; }
+    main .answer h1 {
+      color: #fff;
+      font-size: 5em; }
+    main .answer p {
+      font-size: 3em;
+      color: #fff;
+      line-height: 130%;
+      margin: 1em auto;
+      font-weight: 200; }
+    main .answer .start {
+      margin-top: 6em; }
+    main .answer a {
+      font-size: 2em;
+      font-weight: 900;
+      padding: 0.8em 2em;
+      background: #00ffd4;
+      text-transform: uppercase;
+      border: 1px solid #00ffd4;
+      border-radius: 30px;
+      text-decoration: none;
+      color: #000;
+      box-shadow: 0px 2px 20px 0px rgba(0, 255, 212, 0.5); }
+      main .answer a:hover {
+        box-shadow: 0px 2px 25px 0px #00ffd4; }
+
+.loadanswer header .navbar ul {
+  display: flex;
+  animation: fadeInDown 0.8s linear; }
+
+.loadanswer main .question {
+  display: none; }
+
+.loadanswer main .answer {
+  display: flex;
+  animation: fadeInUp 0.8s linear; }
+
+.background-elements {
+  position: absolute;
+  width: 6em; }
+  .background-elements img {
+    width: 100%; }
+
+.html5 {
+  top: 30%;
+  left: 9%; }
+
+.css3 {
+  top: 50%;
+  left: 9%;
+  animation: csswonder 10s linear infinite; }
+
+.jquery {
+  top: 70%;
+  left: 9%; }
+
+.gulp {
+  top: 40%;
+  right: 9%; }
+
+.npm {
+  top: 30%;
+  right: 9%; }
+
+.github {
+  top: 70%;
+  right: 9%; }
+
+.ball {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  top: 0;
+  height: 50px;
+  width: 50px;
+  z-index: 99; }
