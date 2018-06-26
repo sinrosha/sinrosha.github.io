@@ -1,0 +1,40 @@
+
+<svg id="Illustrations" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193 109">
+  <style>
+		.st0 {
+			fill: #fff
+		}
+
+		.st1 { 
+			fill: #ccefff
+		}
+
+		.st3,
+		.st4 {
+			fill: none;
+			stroke: #00ffd4;
+			stroke-width: 2;
+			stroke-linecap: round;
+			stroke-linejoin: round;
+			stroke-miterlimit: 10
+		}
+		
+		.st4 {
+			fill: #fff
+		} 
+  </style>
+
+	<path class="st0" d="M100.5 61H126l15-6V36l-18-7-18 7-1 6zM133 14h3v3l-3 1.5M71 70l-7 38 14-38M135 70l4 38-18-32-18 32 5-38M158 70H66l-8-9h108zM154 70l7 38-14-38M158 61h-7l-2-13h11zM133 23l-10 4-10-4V6.5L123 1l10 5.5zM37 108h-9l-5-19h19z"/>
+	<path class="st1" d="M121 76l18 32-4-38h-22l-3.5 26.4zM155.1 76l-1.1-6h-7l2.2 6zM69.9 76l1.1-6h7l-2.2 6zM32.5 89H42l-5 19h-4.5zM154 61h4l2-13h-6zM113 12v-1.5L123 5l10 5.5V12z"/>
+	<path fill="none" stroke="#00ffd4" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M133 23l-10 4-10-4V6.5L123 1l10 5.5z"/>
+	<path class="st3" d="M118 16.5V15M126 16.5V15"/>
+	<path class="st4" d="M72.3 61L65 35h33l7.3 26z"/>
+	<path fill="#ccefff" stroke="#00ffd4" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M87.5 47.5l-3 2-3-2v-3l3-2 3 2z"/>
+	<path class="st3" d="M129.3 31.4L123 44l-6.3-12.6M133 12h-29M124.5 21l-2.5 1-2.5-1M133 14h3v3l-3 1.5M104.2 57h-33"/>
+	<path class="st4" d="M105.3 61H121l-2-4h-14.8z"/>
+	<path class="st3" d="M135 43v7l-15 11h6l15-6V36l-18-7-18 7-1 6M135 43v5M158 70H66l-8-9h108zM71 70l-7 38 14-38M154 70l7 38-14-38M10 108h174M189 108h3M1 108h3M135 70l4 38-18-32-18 32 5-38M151 42l2-2-4-4 2-2M158 42l2-2-4-4 2-2M158 61h-7l-2-13h11zM37 108h-9l-5-19h19z"/>
+	<path class="st4" d="M37 72h4l4-8-8 4zM28 79h-4l-7-10 11 6zM38 53h4l7-10-11 6zM24 63L13 51l16 7v5z"/>
+	<path class="st3" d="M33 89V36"/>
+	<path class="st4" d="M29 41l-10-8 5 11 5 2z"/>
+	<path class="st3" d="M25.5 98l4-4 3 3 3-3 4 4"/>
+</svg>

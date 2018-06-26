@@ -54,19 +54,19 @@
 			<meta name="twitter:image:src" content="images/og-image2.png">
 
 			<!-- Favicons -->
-			<link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicons/apple-touch-icon-57x57.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicons/apple-touch-icon-114x114.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicons/apple-touch-icon-72x72.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicons/apple-touch-icon-144x144.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="60x60" href="favicons/apple-touch-icon-60x60.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicons/apple-touch-icon-120x120.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="76x76" href="favicons/apple-touch-icon-76x76.png" />
-			<link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicons/apple-touch-icon-152x152.png" />
-			<link rel="icon" type="image/png" href="favicons/favicon-196x196.png" sizes="196x196" />
-			<link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96" />
-			<link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32" />
-			<link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16" />
-			<link rel="icon" type="image/png" href="favicons/favicon-128.png" sizes="128x128" />
+			<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/images/favicons/apple-touch-icon-57x57.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicons/apple-touch-icon-114x114.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicons/apple-touch-icon-72x72.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicons/apple-touch-icon-144x144.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/images/favicons/apple-touch-icon-60x60.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/images/favicons/apple-touch-icon-120x120.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/images/favicons/apple-touch-icon-76x76.png" />
+			<link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/images/favicons/apple-touch-icon-152x152.png" />
+			<link rel="icon" type="image/png" href="assets/images/favicons/favicon-196x196.png" sizes="196x196" />
+			<link rel="icon" type="image/png" href="assets/images/favicons/favicon-96x96.png" sizes="96x96" />
+			<link rel="icon" type="image/png" href="assets/images/favicons/favicon-32x32.png" sizes="32x32" />
+			<link rel="icon" type="image/png" href="assets/images/favicons/favicon-16x16.png" sizes="16x16" />
+			<link rel="icon" type="image/png" href="assets/images/favicons/favicon-128.png" sizes="128x128" />
 			<meta name="application-name" content="&nbsp;"/>
 			<meta name="msapplication-TileColor" content="#FFFFFF" />
 			<meta name="msapplication-TileImage" content="mstile-144x144.png" />
@@ -75,13 +75,10 @@
 			<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
 			<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
-
-
-		  <!--build:css css/style.min.css-->
-		  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300,400italic'>
-		  <link rel="stylesheet" type="text/css" href="css/animate.css">
-	    <link rel="stylesheet" href="css/style.css">
-	    <!--endbuild-->
+			<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,300,400italic'>
+			<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+      <link rel="stylesheet" href="src/css/style.css">
 
 		  <!--[if lte IE 8]>
 			<style>
@@ -101,82 +98,257 @@
 			<![endif]-->
 		</head>
 		<body>
-			<section class="full-view">
-				<header>
+		  <section class="first-view">
+        <header>
 					<div class="container">
 						<div class="navbar">
-							<div class="logo">
-						    <a href="#" alt="logo">
-						    	<img src="images/logo.png" alt="Roshan's logo">
+							<div class="logo" data-aos="fade-right" data-aos-duration="2000">
+						    <a href="index.html" alt="logo">
+						    	<img src="assets/images/logo0.png" alt="Roshan's logo">
 						    </a>
 				  	  </div>
-					  	<nav>
-							  <ul>
-									<li><a href="">About</a></li>
-									<li><a href="">Projects</a></li>
-									<li><a href="">Experiments</a></li>
-							  	<li><a href="">Blog</a></li>
-							  </ul>
-						  </nav>
+							<ul data-aos="fade-down" data-aos-duration="2000">
+								<li><a href="#about">About</a></li>
+								<li><a href="#skills">Skills</a></li>
+								<li><a href="#project">Projects</a></li>
+							  <li><a href="#contact">Contact</a></li>
+							</ul>
+							
+							<div class="burger-menu">
+						    <span class="bar1"></span>
+							  <span class="bar2"></span>
+							  <span class="bar3"></span>
+						  </div>
+	
 						</div>
 					</div>
 				</header>
-
-				<main>
-					<div class="container">
-						<div class="question animated fadeInUp">
-							<h1>Hi</h1>
-							<div class="input">
-								<input type="text" id="name" name="username" placeholder="What's your name ?" onfocus="this.placeholder = ''" onblur="this.placeholder = 'What\'s your name ?'">
-	              <label for="name"></label>
-							</div>
-							<div class="enter">
-								<a href="#" id="enter">Enter</a>
-							</div>
-						</div>
-
-						<div class="answer">
-							<div class="intro">
-								<h1 id="username">Welcome</h1>
-						  	<p>I'm Roshan Singh.<br> Front-End Developer from Mumbai.</p>
+        <main>
+          <div class="container">
+            <section class="hero">
+              <div class="hero-text" data-aos="fade-up" data-aos-duration="2000">
+                <h1>Welcome</h1>
+						  	<p>I'm Roshan Singh.<br> Front-End Developer<br> from Mumbai.</p>
 						  	<div class="start">
-						  	  <a href="#">Let's Start</a>
+						  	  <a href="#about" class="btn-0"> <span></span>Let's Start</a>
 						  	</div>
-							</div>
+              </div>
+              <div class="hero-image" >
+                
+                <svg id="Illustrations" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 193 109">
+                  <style>
+                    .st0 {
+                      fill: #fff;
+                    }
+
+                    .st1 { 
+                      fill: #fff;
+                    }
+
+                    .st3,
+                    .st4 {
+                      fill: none;
+                      stroke: #00ffd4;
+                      stroke-width: 2;
+                      stroke-linecap: round;
+                      stroke-linejoin: round;
+                      stroke-miterlimit: 10
+                    }
+                    
+                    .st4 {
+                      fill: #fff;
+                    } 
+                  </style>
+
+                  <path id="path" class="st0" d="M100.5 61H126l15-6V36l-18-7-18 7-1 6zM133 14h3v3l-3 1.5M71 70l-7 38 14-38M135 70l4 38-18-32-18 32 5-38M158 70H66l-8-9h108zM154 70l7 38-14-38M158 61h-7l-2-13h11zM133 23l-10 4-10-4V6.5L123 1l10 5.5zM37 108h-9l-5-19h19z"/>
+                  <path id="path" class="st1" d="M121 76l18 32-4-38h-22l-3.5 26.4zM155.1 76l-1.1-6h-7l2.2 6zM69.9 76l1.1-6h7l-2.2 6zM32.5 89H42l-5 19h-4.5zM154 61h4l2-13h-6zM113 12v-1.5L123 5l10 5.5V12z"/>
+                  <path id="path" class="st2"fill="none" stroke="#00ffd4" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M133 23l-10 4-10-4V6.5L123 1l10 5.5z"/>
+                  <path class="st3" d="M118 16.5V15M126 16.5V15"/>
+                  <path id="path" class="st4" d="M72.3 61L65 35h33l7.3 26z"/>
+                  <path class="st5"fill="#ccefff" stroke="#00ffd4" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M87.5 47.5l-3 2-3-2v-3l3-2 3 2z"/>
+                  <path class="st3" d="M129.3 31.4L123 44l-6.3-12.6M133 12h-29M124.5 21l-2.5 1-2.5-1M133 14h3v3l-3 1.5M104.2 57h-33"/>
+                  <path id="path" class="st4" d="M105.3 61H121l-2-4h-14.8z"/>
+                  <path  class="st3" d="M135 43v7l-15 11h6l15-6V36l-18-7-18 7-1 6M135 43v5M158 70H66l-8-9h108zM71 70l-7 38 14-38M154 70l7 38-14-38M10 108h174M189 108h3M1 108h3M135 70l4 38-18-32-18 32 5-38M151 42l2-2-4-4 2-2M158 42l2-2-4-4 2-2M158 61h-7l-2-13h11zM37 108h-9l-5-19h19z"/>
+                  <path id="path" class="st4" d="M37 72h4l4-8-8 4zM28 79h-4l-7-10 11 6zM38 53h4l7-10-11 6zM24 63L13 51l16 7v5z"/>
+                  <path  class="st3" d="M33 89V36"/>
+                  <path id="path" class="st4" d="M29 41l-10-8 5 11 5 2z"/>
+                  <path  class="st3" d="M25.5 98l4-4 3 3 3-3 4 4"/>
+                </svg>
+              </div>
+            </section>
+          </div>
+        </main>
+      </section>
+			
+			<section id="about">
+				<div class="container">
+					<div class="parent">
+						<div class="image" data-aos="fade-right" data-aos-duration="2000">
+							<img src="assets/images/workspace.svg" alt="Developer Workspace">
+						</div>
+						<div class="info-text" data-aos="fade-up" data-aos-duration="1000">
+							<h2>About me</h2>
+							<h4><em>Im a self taught developer with an <br>engineering background.</em></h4>
+							<p><span class="bold">HTML CSS and JavaScript</span> are my new languages of communication. 
+								I learned almost everything by myself and there is a lot more to learn. I care about 
+								<span class="bold">semantics</span>, <span class="bold">accessibility</span> and 
+								<span class="bold">standards</span> compliant code. Working with <span class="bold">SVG</span> 
+								is fun with the possiblities of animation it brings. 
+							</p>
+							<p>Programming is not my only field of focus, I’m interested in design, <span class="bold">UX / UI</span>, 
+								new technologies and much more.
+							</p>
+							<p>On my spare time, I love to attend conferences to meet new people, 
+								build projects and do freelance work.</p>
 						</div>
 					</div>
-				</main>
-
-<!-- 				<div class="background-elements html5">
-				  <img src="images/html.svg">
 				</div>
+			</section>
 
-				<div class="background-elements css3">
-					<img src="images/css.svg">
-				</div>
+			<section id="skills">
+				<div class="container">
+					<div class="parent"> 
+						<div class="info-text" data-aos="fade-up" data-aos-duration="1000">
+							<h2>Skills</h2>
+							<h4><em>I'm comfortable working with <strong class="bold">front-end</strong> technologies and 
+								have decent understanding of the <strong class="bold">UX / UI</strong> Design.</em></h4>
+							<p>As a <strong class="bold">Front End developer</strong>, I’m versatile. I can work 
+								with <strong class="bold">HTML</strong>, <strong class="bold">CSS</strong>, <strong class="bold">JavaScript</strong> and 
+								everything in between, also, venturing as far as doing the design in <strong class="bold">Photoshop</strong> 
+								and do the front-end code.
+							</p>
+							<p>Below are some of the tools I work with:</p>
+						</div>
+            <div class="image item" data-aos="fade-left" data-aos-duration="2000">
+						  <img src="assets/images/workspace9.svg" alt="Developer Workspace">
+						</div>
+					</div>
 
-				<div class="background-elements jquery">
-					<img src="images/jquery.svg">
+					<ul>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">HTML5</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">CSS3</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">JavaScript</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">Sass</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">jQuery</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">Gulp.js</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">Photoshop</li>
+						<li data-aos="zoom-in-right" data-aos-duration="2000">Git & Github</li>
+					</ul>
 				</div>
+			</section>
 
-				<div class="background-elements gulp">
-          <img src="images/gulp.svg">
+			<section id="project">
+				<div class="container">
+					<h2>Projects</h2>
+					<div class="parent">
+						<a href="http://sanguineadvisory.com/" target="_blank">
+							<div class="projects">
+								<h3>	Landing Page</h3>
+								<div class="image">
+									<img src="assets/images/project1.jpg" alt="Sanguine Advisory">
+								</div>
+								<div class="info" data-aos="zoom-in-right" data-aos-duration="1000">
+									<h4>Sanguine Advisory</h4>
+								</div>
+							</div>
+						</a>
+						<a href="http://friendsdiaper.in/">
+							<div class="projects">
+								<h3>Website</h3>
+								<div class="image">
+									<img src="assets/images/project2.jpg" alt="Sanguine Advisory">
+								</div>
+								<div class="info" data-aos="zoom-in-right" data-aos-duration="1000">
+									<h4>Friends Diaper</h4>
+								</div>
+							</div>
+						</a>
+						<a href="http://www.sonyservicentre.com">
+							<div class="projects">
+								<h3>Website</h3>
+								<div class="image">
+									<img src="assets/images/project3.jpg" alt="Sanguine Advisory">
+								</div>
+								<div class="info" data-aos="zoom-in-right" data-aos-duration="1000">
+									<h4>My first website</h4>
+								</div>
+							</div>
+						</a>
+						<a href="http://demo.please-see.com/digital/InnazEvents/v2/">
+							<div class="projects">
+								<h3>Wedding Website</h3>
+								<div class="image">
+									<img src="assets/images/project4.jpg" alt="Sanguine Advisory">
+								</div>
+								<div class="info" data-aos="zoom-in-right" data-aos-duration="1000">
+									<h4>Innaz Events</h4>
+								</div>
+							</div>
+						</a>
+						<a href="javascript-drum-kit/index.html">
+							<div class="projects">
+								<h3>Javascript 30 Series</h3>
+								<div class="image">
+									<img src="assets/images/project5.jpg" alt="Sanguine Advisory">
+								</div>
+								<div class="info" data-aos="zoom-in-right" data-aos-duration="1000">
+									<h4>01 Javascript Drum Kit</h4>
+								</div>
+							</div>
+						</a>
+						<a href="css-clock/index.html">
+							<div class="projects">
+								<h3>Javascript 30 Series</h3>
+								<div class="image">
+									<img src="assets/images/project6.jpg" alt="Sanguine Advisory">
+								</div>
+								<div class="info" data-aos="zoom-in-right" data-aos-duration="1000">
+									<h4>02 JS + CSS Clock</h4>
+								</div>
+							</div>
+						</a>
+					</div>
 				</div>
+			</section>
 
-				<div class="background-elements npm">
-					<img src="images/Npm-logo.svg">
+			<section id="contact">
+				<div class="container">
+					<div class="parent">
+						<h2>Get in touch</h2>
+						<h4>Don’t hesitate to drop me an email or to call me.</h4>
+						<div class="contact-info">
+								<div class="email">
+									<a href="mailto:singhroshanatwork@gmail.com" target="_blank">
+										<i class="fa fa-envelope"></i>
+									</a>
+								</div>
+								<div class="codepen">
+									<a href="https://codepen.io/sinrosha/" target="_blank">
+										<i class="fa fa-codepen"></i>
+									</a>
+								</div>
+								<div class="github">
+									<a href="https://github.com/sinrosha" target="_blank">
+										<i class="fa fa-github"></i>
+									</a>
+								</div>
+								<div class="instagram">
+									<a href="https://www.instagram.com/sinrosha/" target="_blank">
+										<i class="fa fa-instagram"></i>
+									</a>
+								</div>
+								<div class="phone">
+									<a href="tel:9820289647">
+										<i class="fa fa-phone"></i>
+									</a>
+								</div>
+							</div>
+					</div>
 				</div>
-
-				<div class="background-elements github">
-					<img src="images/github-logo.svg">
-				</div>
- -->
-				<div class="ball"></div>
-      </section>
-      <!--build:js js/script.min.js-->
-      <script src="js/jquery-3.3.1.min.js"></script>
-			<script src="js/script.js"></script>
-			<!--endbuild-->
+			</section>
+      <script src="src/js/jquery-3.3.1.min.js"></script>
+			<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+			<script src="src/js/script.js"></script>
 		</body>
   </html>
 	
@@ -185,5 +357,3 @@
 
 
 	
-
-
