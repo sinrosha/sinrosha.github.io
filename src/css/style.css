@@ -68,6 +68,9 @@ html {
   overflow: hidden;
 }
 
+.bg-color {
+  background-color: #00ffd4;
+}
 .burger-menu {
   padding: 6px;
   border-radius: 50%;
@@ -153,7 +156,7 @@ header .navbar ul li a {
   padding: 0.6rem 1.6rem;
   text-transform: uppercase;
   color: #000;
-  opacity: 0.8;
+  font-weight: 400;
 }
 
 header .navbar ul li a:before {
@@ -164,7 +167,6 @@ header .navbar ul li a:before {
   left: 0;
   width: 0;
   height: 2px;
-  opacity: 0.8;
   transition: all 0.8s; 
 }
   
@@ -176,7 +178,6 @@ header .navbar ul li a:after {
   right: 0;
   width: 0;
   height: 2px;
-  opacity: 0.8;
   transition: all 0.8s; 
 }
 
@@ -217,8 +218,7 @@ main {
 .hero h1 {
   color: #000;
   font-size: 6rem;
-  font-weight: 800;
-  opacity: 0.8;
+  font-weight: 600;
 }
 
 .hero p {
@@ -226,7 +226,7 @@ main {
   color: #000;
   line-height: 130%;
   margin: 1em auto;
-  font-weight: 200; 
+  font-weight: 300; 
 }
 
 .hero .start {
@@ -237,14 +237,13 @@ main {
 
 .hero a {
   font-size: 2em;
-  font-weight: 900;
+  font-weight: 600;
   padding: 0.8em 2em;
   text-transform: uppercase;
   border: 2px solid #00ffd4;
   border-radius: 30px;
   text-decoration: none;
   color: #000;
-  opacity: 0.8;
   overflow: hidden;
   position: relative;
   transition: all 0.8s linear;
@@ -297,7 +296,6 @@ main {
 #skills .info-text {
   width: 40%;
   margin: 0 30px;
-  opacity: 0.8;
 }
 
 #about .image img,
@@ -314,7 +312,6 @@ main {
   font-weight: 600;
   padding: 1.2rem 0;
   display: inline-block;
-  opacity: 0.8;
 }
 
 #about h2:before,
@@ -344,12 +341,11 @@ main {
 #skills h4,
 #contact h4 {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   margin: 30px auto;
   line-height: 160%;
   font-style: italic;
   word-spacing: 4px;
-  opacity: 0.8;
 }
 
 
@@ -384,7 +380,6 @@ main {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
-  opacity: 0.8;
   box-shadow: -2px 1px 9px -3px rgba(0,0,0,0.75);
 }
 
@@ -407,10 +402,10 @@ main {
   position: absolute;
   height: 100%;
   width: 0;
-  opacity: 0.6;
   background: #00ffd4;;
   border-radius: 15px;
-  transition: all 0.8s linear;
+  transition: all 0.6s linear;
+  opacity: 0.6;
 }
 
 #project .image:hover:before {
@@ -431,7 +426,6 @@ main {
   background: #fff;
   padding: 1rem;
   left: -50px;
-  opacity: 0.8;
 }
 
 #project .image img {
@@ -448,7 +442,6 @@ main {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  opacity: 0.8;
   box-shadow: -2px 1px 9px -3px rgba(0,0,0,0.75);
 }
 
@@ -590,6 +583,7 @@ main {
 
   #skills {
     margin: 0 auto;
+    overflow: hidden;
   }
 
   #skills ul {
