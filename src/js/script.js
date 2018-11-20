@@ -29,3 +29,31 @@ $(".burger-menu").click(function() {
     $(".burger-menu").removeClass("change");
   });
 });
+
+
+  $.ajax({
+    url: "https://api.instagram.com/v1/tags/sinrosha/media/recent?access_token=1573843860.db9f84d.e60a7c7520654e199028e37e56fe1ed0",
+    type: "GET",
+    dataType: "json",
+  })
+
+  .done(function(json) {
+
+    const feed = $(json)[0].data;
+    
+    feed.forEach(post => {
+       var post_image = post.images.standard_resolution.url;
+       $(".posts ul").append("<li><div class='image'><img src='"+ post_image + "'></div</li>");
+    });
+  }) 
+
+  .fail(function(xhr, status, errorThrown) {
+    console.log( "Error: " + errorThrown );
+    console.log( "Status: " + status );
+    console.dir( xhr );
+  })
+
+  .always(function(xhr, status) {
+     console.log("Request Completed");
+  });
+
