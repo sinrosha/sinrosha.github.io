@@ -393,7 +393,7 @@ html {
     padding: 0;
     font-size: 10px;
     box-sizing: border-box;
-    font-family: Lato, arial, sans-serif
+    font-family: Lato, arial, sans-serif;
 }
 
 .overlay {
@@ -401,7 +401,26 @@ html {
     background: #00ffd4;
     z-index: 100;
     opacity: 1;
-    height: 100vh
+    height: 100vh;
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #212424;
+    z-index: 99;
+}
+
+.loader .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.stop-scroll {
+    overflow: hidden;
 }
 
 .bg-color {
@@ -765,7 +784,7 @@ main {
 	box-shadow: -2px 1px 9px -3px rgba(0, 0, 0, .75);
 	border-radius: 15px;
 	max-width: 100%;
-    filter: drop-shadow(8px 8px 10px gray) grayscale(100%) ;
+    filter: drop-shadow(4px 4px 5px gray);
 }
 
 .posts img:hover {
@@ -809,6 +828,7 @@ main {
 }
 
 @media (min-width:320px) and (max-width:767px) {
+
     #skills .parent,
     header .navbar ul {
         flex-direction: column
@@ -909,6 +929,7 @@ main {
 
     .posts ul {
         flex-direction: column;
+        padding-bottom: 0;
     }
 
     .posts ul li {
