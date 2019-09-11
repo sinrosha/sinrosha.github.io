@@ -367,6 +367,10 @@ html,
 	margin: 0 10px;
 }
 
+.mobile {
+	display: none;
+}
+
 .first-vertical {
 	width: 10%;
 }
@@ -431,9 +435,9 @@ html,
 	max-width: 100%;
 }
 
-.footer {
+/*.footer {
 	display: none;
-}
+}*/
 
 .contact {
 	display: flex;
@@ -644,6 +648,29 @@ input::placeholder {
 	border-radius: 10px;
 }
 
+.social-icons {
+	width: 250px;
+	margin: 30px auto;
+	margin-top: 80px;
+}
+
+.social-icons ul {
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.social-icons svg {
+	width: 30px;
+	height: 30px;
+	fill: #008588;;
+}
+
+.info-box .content {
+	width: 80%;
+    margin: 0 auto;
+}
+
 
 .logo-bottom,
 .logo-top {
@@ -663,8 +690,8 @@ input::placeholder {
 
 .info-box h1 {
 	font-family: 'EB Garamond', serif;
-	font-size: 33px;
-	margin: 10px auto 10px;
+	font-size: 36px;
+	margin: 20px auto;
 	color: #008588;
 	font-weight: 700;
 }
@@ -680,7 +707,7 @@ input::placeholder {
 	font-weight: 600;
 }
 
-.info-box p:nth-child(n) {
+.info-box p:last-child {
 	margin-bottom: 0;
 }
 
@@ -767,7 +794,53 @@ input::placeholder {
 	}
 	
 	#hero {
-		background-size: 267%;
+		background-size: cover;
+    	background-position: 12%;
+	}
+
+	.info-box {
+		width: 80%;
+	}
+
+	.logo-bottom, .logo-top {
+		width: 150px;
+		margin-left: -75px;
+	}
+
+	.social-icons {
+		margin: 20px auto;
+		margin-top: 60px;
+		width: 50%;
+	}
+
+	.info-box .content {
+		width: 90%;
+	}
+
+	.info-box h1 {
+		font-size: 28px;
+		line-height: 120%;
+		margin: 15px auto;
+	}
+
+	.info-box p {
+		font-size: 12px;
+		line-height: 160%;
+		width: 90%;
+		margin-bottom: 10px;
+	}
+
+	.social-icons svg {
+		width: 20px;
+		height: 20px;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.action {
+		margin: 0!important;
 	}
 }
 
@@ -967,12 +1040,20 @@ input::placeholder {
 @media screen and (min-width: 1600px) and (max-width: 2560px) {
 	
 	.info-box h1 {
-		font-size: 38px;
-		margin-bottom: 30px;
+		font-size: 56px;
+		margin: 50px 0 40px 0;
+	}
+
+	.info-box {
+		height: 97%;
+	}
+
+	.social-icons {
+		margin-top: 120px;
 	}
 	
 	.info-box p {
-		font-size: 16px;
+		font-size: 18px;
 		margin-bottom: 30px;
 	}
 	
