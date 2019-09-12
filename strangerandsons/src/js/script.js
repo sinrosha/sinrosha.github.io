@@ -98,6 +98,23 @@ function preload(arrayOfImages) {
 
 // Usage:
 
+
+  $(".eye").on("click", function(e) {
+    e.stopPropagation();
+    $(this).css("animation-play-state", "paused");
+    $(this).addClass("rotated", {duration:100}).css("visibility", "hidden" );
+  });
+
+   $(".eye").on("mouseover", function() {
+    $(this).css("animation-play-state", "paused");
+    $(this).css("animation", "none");
+  });
+
+  $(".eye").on("mouseleave", function() {
+    $(this).css("animation-play-state", "running");
+    $(this).css("animation", "pulse 700ms linear infinite alternate");
+  })
+
 preload([
     'assets/img/dingbat_left1.svg',
     'assets/img/dingbat_right1.svg',
@@ -107,3 +124,11 @@ preload([
     'assets/img/call.svg',
     'assets/img/logo.svg'
 ]);
+
+
+// We listen to the resize event
+window.addEventListener('resize', () => {
+  // We execute the same script as before
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
