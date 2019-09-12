@@ -408,7 +408,7 @@ html,
 	background: url(../../new-bg.jpg) no-repeat center bottom;
 	background-size: cover;
 	height: 100vh;
- 	height: calc(var(--vh, 1vh) * 100);
+ 	height: calc(var(--vh, 1vh) * 100)!important;
 }
 
 #hero .main {
@@ -614,7 +614,6 @@ input::placeholder {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 }
 
 #bg {
