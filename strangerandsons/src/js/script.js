@@ -29,7 +29,7 @@ $(document).ready(function() {
 		    }, { duration: 500, queue: false });
 
 		    $(".action").animate({
-		       width: '48%'
+		       width: '75%'
 		    }, { duration: 1000, queue: false });
            
             $('form').css({
@@ -99,21 +99,24 @@ function preload(arrayOfImages) {
 // Usage:
 
 
-  $(".eye").on("click", function(e) {
-    e.stopPropagation();
-    $(this).css("animation-play-state", "paused");
-    $(this).addClass("rotated", {duration:100}).css("visibility", "hidden" );
-  });
+  // $(".eye").on("click", function(e) {
+  //   e.stopPropagation();
+  //   $(this).css("animation-play-state", "paused");
+  //   $(this).addClass("rotated", {duration:100}).css("visibility", "hidden" )
+  //   .fadeOut(1000, function() {
+  //       $(this).css("background-image", "url('/Users/roshansingh/desktop/strangerandsons/assets/img/frame.png')");
+  //   });
+  // });
 
-   $(".eye").on("mouseover", function() {
-    $(this).css("animation-play-state", "paused");
-    $(this).css("animation", "none");
-  });
+  //  $(".eye").on("mouseover", function() {
+  //   $(this).css("animation-play-state", "paused");
+  //   $(this).css("animation", "none");
+  // });
 
-  $(".eye").on("mouseleave", function() {
-    $(this).css("animation-play-state", "running");
-    $(this).css("animation", "pulse 700ms linear infinite alternate");
-  })
+  // $(".eye").on("mouseleave", function() {
+  //   $(this).css("animation-play-state", "running");
+  //   $(this).css("animation", "pulse 700ms linear infinite alternate");
+  // })
 
 preload([
     'assets/img/dingbat_left1.svg',
