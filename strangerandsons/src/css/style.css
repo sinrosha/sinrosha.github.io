@@ -847,7 +847,7 @@ input::placeholder {
 	}
 
 	.social-icons {
-		margin: 20px auto;
+		margin: 10px auto;
 		margin-top: 60px;
 		width: 50%;
 	}
@@ -863,7 +863,7 @@ input::placeholder {
 	}
 
 	.info-box p {
-		font-size: 12px;
+		font-size: 10px;
 		line-height: 160%;
 		width: 90%;
 		margin-bottom: 10px;
@@ -1003,6 +1003,11 @@ input::placeholder {
 	#hero .main {
 		width: 100%;
 	}
+
+	.blue-frame {
+    width: calc(100% - 5vw);
+    height: calc(100% - 5vw); 
+}
 	
 	.action {
 		overflow: visible !important;

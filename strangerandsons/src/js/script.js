@@ -38,8 +38,8 @@ $(document).ready(function() {
 		  	})
 
 		  	.animate({
-              opacity: 1
-		  	}, 1000);
+            opacity: 1
+		  	}, 2000);
 
              });
    
