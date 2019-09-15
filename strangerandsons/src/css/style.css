@@ -698,7 +698,7 @@ input::placeholder {
 
 .info-box p {
 	font-family: 'Raleway', sans-serif;
-	line-height: 160%;
+	line-height: 180%;
 	font-size: 14px;
 	color: #008588;
 	width: 95%;
@@ -1096,7 +1096,7 @@ input::placeholder {
 	}
 }
 
-@media screen and (min-width: 786px) and (max-height: 720px) {
+@media screen and (min-width: 786px) and (max-width: 1366px) and (max-height: 700px) {
 	.social-icons {
 		margin-bottom: 10px;
 		margin-top: 70px;
