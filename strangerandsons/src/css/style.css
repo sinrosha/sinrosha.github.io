@@ -1114,6 +1114,57 @@ input::placeholder {
 	}
 }
 
+@media screen and (max-width: 320px) {
+	.info-box h1 {
+		font-size: 18px;
+		margin: 10px auto;
+	}
+
+	.social-icons svg {
+		width: 15px;
+		height: 15px;
+	}
+
+	.frame:after {
+		right: -39px;
+	}
+
+	.info-box p {
+		font-size: 9px;
+	}
+
+	.logo-bottom, .logo-top {
+		width: 100px;
+		margin-left: -50px;
+	}
+
+	.frame {
+		padding: 26px 36px;
+	}
+
+	.contact {
+		width: 100%;
+	}
+
+	input {
+		width: 75%;
+	}
+
+	.submit {
+		margin-top: -20px;
+	}
+
+	.frame:before,
+	.frame:after {
+		top: 64%;
+	}
+
+	.action .open.frame:before,
+	.action .open.frame:after  {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 1600px) and (max-width: 2560px) {
 	
 	.info-box h1 {
