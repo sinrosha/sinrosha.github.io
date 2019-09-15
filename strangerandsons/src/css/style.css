@@ -848,7 +848,7 @@ input::placeholder {
 
 	.social-icons {
 		margin: 10px auto;
-		margin-top: 60px;
+		margin-top: 50px;
 		width: 50%;
 	}
 
@@ -858,14 +858,14 @@ input::placeholder {
 
 	.info-box h1 {
 		font-size: 28px;
-		line-height: 120%;
+		line-height: 110%;
 		margin: 15px auto;
 	}
 
 	.info-box p {
 		font-size: 10px;
-		line-height: 160%;
-		width: 90%;
+		line-height: 140%;
+		width: 95%;
 		margin-bottom: 10px;
 	}
 
@@ -1024,7 +1024,7 @@ input::placeholder {
 	}
 	
 	.frame {
-		padding: 56px 36px;
+		padding: 36px 36px;
 	}
 	
 	label {
