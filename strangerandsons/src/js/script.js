@@ -25,7 +25,7 @@ $(document).ready(function() {
            $(".frame").addClass("frame-bg");
            $(".action").addClass("flex-one");
 		   $(".frame").animate({
-		       "background-size": '94%'
+		       "background-size": '89%'
 		    }, { duration: 500, queue: false });
 
 		    $(".action").animate({
@@ -102,10 +102,11 @@ function preload(arrayOfImages) {
   $(".eye").on("click", function(e) {
     e.stopPropagation();
     $(this).css("animation-play-state", "paused");
-    $(this).addClass("rotated", {duration:1000}).hide(2000, function() {
-      $(".dingbats").animate({"width": "0"}, {duration: 100, queue:false});
-
-    });
+    $(this).addClass("rotated", {duration:500});
+    $(this).fadeOut(1500, function() {
+      $(".frame2").fadeIn(1000);
+    })
+  
   });
 
    $(".eye").on("mouseover", function() {
@@ -138,6 +139,7 @@ window.addEventListener('resize', () => {
   // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+<<<<<<< HEAD
 });
 
 
@@ -150,3 +152,15 @@ $("#email").on("focusout", function() {
  $(".content").fadeIn();
 });
 }
+||||||| merged common ancestors
+});
+
+$("#email").on("focus", function() {
+ $(".content").fadeOut();
+});
+$("#email").on("focusout", function() {
+ $(".content").fadeIn();
+});
+=======
+});
+>>>>>>> 0784f86c22be673c5604e9a09f1ee0c1d55276a3

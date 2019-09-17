@@ -444,7 +444,7 @@ html,
 .contact {
 	display: flex;
 	justify-content: space-around;
-/*	align-items: center;*/
+	align-items: center;
 }
 
 .contact-info {
@@ -650,12 +650,21 @@ input::placeholder {
 	height: calc(100% - 2vw);
 	margin: 0 auto;
 	border: 2px solid #008689;
-	border-radius: 10px;}
+	border-radius: 10px;
+}
 
 .social-icons {
 	width: 250px;
+<<<<<<< HEAD
 	margin: 2vh auto;
 	margin-top: 8vh;
+||||||| merged common ancestors
+	margin: 20px auto;
+	margin-top: 80px;
+=======
+	margin: 30px auto;
+	margin-top: 80px;
+>>>>>>> 0784f86c22be673c5604e9a09f1ee0c1d55276a3
 }
 
 .social-icons ul {
@@ -695,20 +704,44 @@ input::placeholder {
 .info-box h1 {
 	font-family: 'EB Garamond', serif;
 	font-size: 36px;
+<<<<<<< HEAD
 	margin: 2.5vh auto;
+||||||| merged common ancestors
+	margin: 10px auto;
+=======
+	margin: 20px auto;
+>>>>>>> 0784f86c22be673c5604e9a09f1ee0c1d55276a3
 	color: #008588;
 	font-weight: 600;
 }
 
 .info-box p {
+<<<<<<< HEAD
 	font-family: 'Ralewa`y', sans-serif;
 	line-height: 3.2vh;
 	font-size: 1.9vh;
+||||||| merged common ancestors
+	font-family: 'Raleway', sans-serif;
+	line-height: 160%;
+	font-size: 14px;
+=======
+	font-family: 'Raleway', sans-serif;
+	line-height: 180%;
+	font-size: 14px;
+>>>>>>> 0784f86c22be673c5604e9a09f1ee0c1d55276a3
 	color: #008588;
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
+<<<<<<< HEAD
 	margin-bottom: 10px;
 	font-weight: 500;
+||||||| merged common ancestors
+	margin-bottom: 10px;
+	font-weight: 600;
+=======
+	margin-bottom: 20px;
+	font-weight: 600;
+>>>>>>> 0784f86c22be673c5604e9a09f1ee0c1d55276a3
 }
 
 .info-box p:last-child {
@@ -725,18 +758,21 @@ input::placeholder {
 
 .dingbats {
 	position: relative;
-	width:80px;
+	width: 80px;
+	padding: 40px 0;
 	margin: 20px auto;
-	height: 80px;
 }
 
 .footer1 .eye {
-	position: relative;
-	width: 80px;
-	height: 80px;
-	background: url(../../assets/img/eye.svg);
+	position: absolute;
+	top: 0;
+	left:0;
+	bottom: 0;
+	right:0;
+	background: url(../../assets/img/eye.svg) no-repeat;
 	cursor: pointer;
 	transition: all 2s;
+	transform-origin: 50% 50% 50%;
 	animation: pulse 700ms linear infinite alternate;
 }
 
@@ -764,7 +800,14 @@ input::placeholder {
 }
 
 .frame2 {
-
+	background: url(../../assets/img/frame.png) no-repeat center center;
+	background-size: contain;
+	display: none;
+	position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width:100%;
 }
 
 @media screen and (max-width: 767px) and (min-width: 320px) {
