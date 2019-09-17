@@ -140,9 +140,13 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
-$("#email").on("focus", function() {
+
+
+if($(window).width() <= 768){
+  $("#email").on("focus", function() {
  $(".content").fadeOut();
 });
 $("#email").on("focusout", function() {
  $(".content").fadeIn();
 });
+}

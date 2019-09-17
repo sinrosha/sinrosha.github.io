@@ -481,6 +481,10 @@ html,
 	background-position: center 41px;
 }
 
+.open {
+	padding: 46px 45px;
+}
+
 .frame-bg {
 	background: url(../../assets/img/frame.png) no-repeat center center;
 	background-size: 0%;
@@ -651,7 +655,7 @@ input::placeholder {
 .social-icons {
 	width: 250px;
 	margin: 2vh auto;
-	margin-top: 10vh;
+	margin-top: 8vh;
 }
 
 .social-icons ul {
@@ -676,8 +680,8 @@ input::placeholder {
 .logo-top {
 	position: absolute;
 	left: 50%;
-	width: 210px;
-	margin-left: -105px;
+	width: 180px;
+	margin-left: -90px;
 }
 
 .logo-top {
@@ -691,15 +695,15 @@ input::placeholder {
 .info-box h1 {
 	font-family: 'EB Garamond', serif;
 	font-size: 36px;
-	margin: 10px auto;
+	margin: 2.5vh auto;
 	color: #008588;
 	font-weight: 600;
 }
 
 .info-box p {
-	font-family: 'Raleway', sans-serif;
-	line-height: 160%;
-	font-size: 14px;
+	font-family: 'Ralewa`y', sans-serif;
+	line-height: 3.2vh;
+	font-size: 1.9vh;
 	color: #008588;
 	width: 95%;
 	margin: 0 auto;
@@ -1171,8 +1175,16 @@ input::placeholder {
 }
 
 @media screen and (min-width: 1600px) and (max-width: 2560px) {
+
+	.info-box .content {
+		width: 60%;
+	}
+
+	.info-box p:last-child {
+		margin-bottom: 30px;
+	}
 	
-	.info-box h1 {
+	/*.info-box h1 {
 		font-size: 42px;
 		margin: 40px 0 30px 0;
 	}
@@ -1197,5 +1209,5 @@ input::placeholder {
 	
 	.desktop-small {
 		display: none
-	}
+	}*/
 }
