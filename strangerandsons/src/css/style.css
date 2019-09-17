@@ -650,8 +650,8 @@ input::placeholder {
 
 .social-icons {
 	width: 250px;
-	margin: 20px auto;
-	margin-top: 80px;
+	margin: 2vh auto;
+	margin-top: 10vh;
 }
 
 .social-icons ul {
@@ -693,7 +693,7 @@ input::placeholder {
 	font-size: 36px;
 	margin: 10px auto;
 	color: #008588;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 .info-box p {
@@ -704,7 +704,7 @@ input::placeholder {
 	width: 95%;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .info-box p:last-child {
@@ -852,7 +852,7 @@ input::placeholder {
 
 	.social-icons {
 		margin: 10px auto;
-		margin-top: 50px;
+		margin-top: 8vh;
 		width: 50%;
 	}
 
@@ -861,14 +861,14 @@ input::placeholder {
 	}
 
 	.info-box h1 {
-		font-size: 28px;
-		line-height: 110%;
-		margin: 15px auto;
+		font-size: 4vh;
+		line-height: 5vh;
+		margin: 2vh auto;
 	}
 
 	.info-box p {
-		font-size: 10px;
-		line-height: 140%;
+		font-size: 1.6vh;
+		line-height: 2.5vh;
 		width: 95%;
 		margin-bottom: 10px;
 	}
@@ -1028,7 +1028,11 @@ input::placeholder {
 	}
 	
 	.frame {
-		padding: 36px 36px;
+		padding: 6vh 40px; 
+	}
+
+	.open {
+		padding: 6vh 3vh;
 	}
 	
 	label {
@@ -1037,9 +1041,9 @@ input::placeholder {
 	}
 	
 	input {
-		padding: 3px;
-		width: 90%;
-		margin: 5px auto;
+		padding: 2px;
+		width: 85%;
+		margin: 2px auto;
 		font-size: 8px;
 	}
 	/*	.instagram,
@@ -1142,9 +1146,6 @@ input::placeholder {
 		margin-left: -50px;
 	}
 
-	.frame {
-		padding: 26px 36px;
-	}
 
 	.contact {
 		width: 100%;
