@@ -191,9 +191,9 @@ $(".eye-new").on("click", function(){
       duration: 500,
       complete: function() {
         $(".container-form").fadeIn("500", function() {
-          $(".container-frame").fadeIn("100", function() {
-            $(this).animate({"opacity": 1});
-            $(".container-form").fadeOut();
+          $(".container-frame").fadeIn("500", function() {
+            $(".container-form").fadeOut("1000");
+            $(this).animate({"opacity": 1}, {duration: 1000});
           });
         });
       }
