@@ -154,67 +154,85 @@ if($(window).width() <= 768){
 
 // Test JS
 
-if($(window).width() >= 768) {
-  $('.eye-new').click(function() {
-    $('.eye-new').animate({ 
-        deg: 180 
-      },
-      {
-          duration: 200,
-          easing: "linear",
-          step: function(now) {
-            $(this).css({ transform: 'rotate(' + now + 'deg)' });
-          },
-          complete: function() {  
-            $(".container-form").delay("2000").animate({width: 0}, function() {
-              $(".eye-new").fadeOut("2000", function() {
-                $(".container-form").addClass("open-new");
-                $(".frame-new").fadeIn("500", function() {
-                  $(".container-form").animate({width: "380px"}, function() {
-                    $(".submit-new").fadeIn("1000", function() {
-                      $(".form-new").fadeIn("1000");
-                    });
-                  });
-                });
-              });
-            });
-          }
-      }
-    );
-  });
-}
+// if($(window).width() >= 768) {
+//   $('.eye-new').click(function() {
+//     $('.eye-new').animate({ 
+//         deg: 180 
+//       },
+//       {
+//           duration: 200,
+//           easing: "linear",
+//           step: function(now) {
+//             $(this).css({ transform: 'rotate(' + now + 'deg)' });
+//           },
+//           complete: function() {  
+//             $(".container-form").delay("2000").animate({width: 0}, function() {
+//               $(".eye-new").fadeOut("2000", function() {
+//                 $(".container-form").addClass("open-new");
+//                 $(".frame-new").fadeIn("500", function() {
+//                   $(".container-form").animate({width: "380px"}, function() {
+//                     $(".submit-new").fadeIn("1000", function() {
+//                       $(".form-new").fadeIn("1000");
+//                     });
+//                   });
+//                 });
+//               });
+//             });
+//           }
+//       }
+//     );
+//   });
+// }
 
-if($(window).width() <= 767) {
-  $('.eye-new').click(function() {
-    $('.eye-new').animate({ 
-        deg: 180 
-      },
-      {
-          duration: 200,
-          easing: "linear",
-          step: function(now) {
-            $(this).css({ transform: 'rotate(' + now + 'deg)' });
-          },
-          complete: function() {  
-            $(".container-form").delay("2000").animate({width: 0}, function() {
-              $(".eye-new").fadeOut("2000", function() {
-                $(".container-form").addClass("open-new");
-                $(".frame-new").fadeIn("500", function() {
-                  $(".container-form").animate({width: "220px"}, function() {
-                    $(".submit-new").fadeIn("1000", function() {
-                      $(".form-new").fadeIn("1000");
-                    });
-                  });
-                });
-              });
-            });
-          }
+$(".eye-new").on("click", function(){
+  $(".container-form").animate(
+    {"opacity": 0}, 
+    {
+      duration: 500,
+      complete: function() {
+        $(".container-form").fadeIn("500", function() {
+          $(".container-frame").fadeIn("100", function() {
+            $(this).animate({"opacity": 1});
+            $(".container-form").fadeOut();
+          });
+        });
       }
-    );
-  });
-}
+    });
+ 
+});
 
-$(".eye-new").on("mouseover click", function() {
+
+// if($(window).width() <= 767) {
+//   $('.eye-new').click(function() {
+//     $('.eye-new').animate({ 
+//         deg: 180 
+//       },
+//       {
+//           duration: 200,
+//           easing: "linear",
+//           step: function(now) {
+//             $(this).css({ transform: 'rotate(' + now + 'deg)' });
+//           },
+//           complete: function() {  
+//             $(".container-form").delay("2000").animate({width: 0}, function() {
+//               $(".eye-new").fadeOut("2000", function() {
+//                 $(".container-form").addClass("open-new");
+//                 $(".frame-new").fadeIn("500", function() {
+//                   $(".container-form").animate({width: "220px"}, function() {
+//                     $(".submit-new").fadeIn("1000", function() {
+//                       $(".form-new").fadeIn("1000");
+//                     });
+//                   });
+//                 });
+//               });
+//             });
+//           }
+//       }
+//     );
+//   });
+// }
+
+$(".eye-new").on("mouseover", function() {
   $(this).css("animation-play-state", "paused");
   $(this).css("animation", "none");
 });

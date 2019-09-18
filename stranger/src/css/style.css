@@ -1001,10 +1001,14 @@ input::placeholder {
 	.blue-frame {
     width: calc(100% - 5vw);
     height: calc(100% - 5vw); 
-}
+	}
 	
 	.action {
 		overflow: visible !important;
+	}
+
+	.container-frame {
+		width: 220px;
 	}
 
 	.contact {
@@ -1127,7 +1131,16 @@ input::placeholder {
 		.container-form {
 			width: 80px;
 			margin: 20px auto;
-			transition: all 1s;
+			opacity: 1;
+			transition: all 0.6s;
+		}
+
+		.container-frame {
+			width: 380px;
+			margin: 20px auto;
+			transition: all 0.6s;
+			display: none;
+			opacity: 0;
 		}
 
 		.aspect-ratio-box {
@@ -1152,12 +1165,12 @@ input::placeholder {
 
 		.eye-new {
 			animation: pulse 700ms linear infinite alternate;
+			cursor: pointer;
 		}
 
 		.frame-new {
 			 background: url(../../test/eye-frame.svg) no-repeat center center;
 			 background-size: contain;
-			 display: none;
 		}
 
 		.aspect-ratio-box:after {
@@ -1174,8 +1187,8 @@ input::placeholder {
 		    margin-right: -70px;
 		}
 
-		.open-new .aspect-ratio-box:after,
-		.open-new .aspect-ratio-box:before {
+		.container-frame .aspect-ratio-box:after,
+		.container-frame .aspect-ratio-box:before {
 			top: 61%;
 		}
 
@@ -1198,7 +1211,6 @@ input::placeholder {
 			width: 100%;
 			bottom: 22px;
 			text-align: center;
-			display: none;
 			transition: all 2s;
 		}
 
@@ -1259,7 +1271,6 @@ input::placeholder {
 		    left: 50%;
 		    margin-left: -25px;
 		    width: 50px;
-		    display: none;
 		    animation: action 1s ease-in infinite 4s alternate;
 			animation-fill-mode: both;
 		}
@@ -1332,8 +1343,8 @@ input::placeholder {
 		margin-top: -11px;
 	}
 
-	.open-new .aspect-ratio-box:after, 
-	.open-new .aspect-ratio-box:before {
+	.container-frame .aspect-ratio-box:after, 
+	.container-frame .aspect-ratio-box:before {
 		top: 57%;
 	}
 
@@ -1359,6 +1370,11 @@ input::placeholder {
 		margin: 0 auto;
 	}
 
+	.container-frame {
+		width: 220px;
+		margin: 0 auto;
+	}
+
 }
 
 @media screen and (max-width: 320px) {
@@ -1370,7 +1386,7 @@ input::placeholder {
 		bottom: -10px;
 	}
 
-	.open-new .aspect-ratio-box:after, .open-new .aspect-ratio-box:before {
+	.container-frame .aspect-ratio-box:after, .container-frame .aspect-ratio-box:before {
 		display: none;
 	}
 }
