@@ -1315,7 +1315,7 @@ input::placeholder {
 	}
 
 	.label-new {
-		font-size: 9px;
+		font-size: 8px;
 	}
 
 	.aspect-ratio-box:before {
@@ -1342,7 +1342,7 @@ input::placeholder {
 	}
 
 	.form-new {
-		bottom: 37px;
+		bottom: 38px;
 	}
 
 	.input-new[type="text"] {
