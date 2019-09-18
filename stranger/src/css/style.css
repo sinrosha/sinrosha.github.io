@@ -1315,21 +1315,21 @@ input::placeholder {
 	}
 
 	.label-new {
-		font-size: 8px;
+		font-size: 9px;
 	}
 
 	.aspect-ratio-box:before {
-		width: 50px;
-		height: 28px;
-		margin-left: -50px;
-		margin-top: -14px;
+		width: 30px;
+		height: 18px;
+		margin-left: -30px;
+		margin-top: -9px;
 	}
 
 	.aspect-ratio-box:after {
-		width: 50px;
-		height: 28px;
-		margin-right: -50px;
-		margin-top: -14px;
+		width: 30px;
+		height: 18px;
+		margin-right: -30px;
+		margin-top: -9px;
 	}
 
 	.open-new .aspect-ratio-box:after, 
@@ -1342,12 +1342,21 @@ input::placeholder {
 	}
 
 	.form-new {
-		bottom: 40px;
+		bottom: 37px;
 	}
 
 	.input-new[type="text"] {
 		padding: 3px;
 		font-size: 8px;
+	}
+
+
+	.submit-new {
+		bottom: -10px;
+	}
+
+	.container-form {
+		margin: 0 auto;
 	}
 
 }

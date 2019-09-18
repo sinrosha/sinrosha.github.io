@@ -200,7 +200,7 @@ if($(window).width() <= 767) {
               $(".eye-new").fadeOut("2000", function() {
                 $(".container-form").addClass("open-new");
                 $(".frame-new").fadeIn("500", function() {
-                  $(".container-form").animate({width: "200px"}, function() {
+                  $(".container-form").animate({width: "220px"}, function() {
                     $(".submit-new").fadeIn("1000", function() {
                       $(".form-new").fadeIn("1000");
                     });
