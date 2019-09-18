@@ -1207,7 +1207,7 @@ input::placeholder {
 		    color: #bb8b2b;
 		    font-size: 14px;
 		    padding: 8px 0;
-		    font-weight: 400;
+		    font-weight: 600;
 		}
 
 		.input-new[type="text"] {
@@ -1319,17 +1319,17 @@ input::placeholder {
 	}
 
 	.aspect-ratio-box:before {
-		width: 30px;
-		height: 18px;
-		margin-left: -30px;
-		margin-top: -9px;
+		width: 40px;
+		height: 22px;
+		margin-left: -40px;
+		margin-top: -11px;
 	}
 
 	.aspect-ratio-box:after {
-		width: 30px;
-		height: 18px;
-		margin-right: -30px;
-		margin-top: -9px;
+		width: 40px;
+		height: 22px;
+		margin-right: -40px;
+		margin-top: -11px;
 	}
 
 	.open-new .aspect-ratio-box:after, 
