@@ -862,7 +862,7 @@ input::placeholder {
 	
 	#hero {
 		background-size: cover;
-    	background-position: 12%;
+ 
 	}
 
 	.info-box {
@@ -1130,14 +1130,14 @@ input::placeholder {
 
 		.container-form {
 			width: 80px;
-			margin: 20px auto;
+			margin: 30px auto 20px;
 			opacity: 1;
 			transition: all 0.6s;
 		}
 
 		.container-frame {
 			width: 380px;
-			margin: 20px auto;
+			margin: 30px auto 20px;
 			transition: all 0.6s;
 			display: none;
 			opacity: 0;
@@ -1225,9 +1225,9 @@ input::placeholder {
 		.input-new[type="text"] {
 		    border: 0;
 		    outline: 0;
-		    background: #333333;
+		    background: #cdc8b2;
 		    padding: 4px 0 6px 0;
-		    color: #fff;
+		    color: #000;
 		    font-size: 14px;
 		    text-align: center;
 		    margin: 0 10px;
@@ -1246,12 +1246,12 @@ input::placeholder {
 
 		.input-new[type="text"]::placeholder {
 			text-align:center;
-			color: #fff;
+			color: #000;
 			border: 0;
 			outline: 0;
 			font-family: raleway;
 			font-style: italic;
-			background: #333333;
+			background: #cdc8b2;
 		}
 
 		.label-new,
@@ -1367,7 +1367,8 @@ input::placeholder {
 	}
 
 	.container-form {
-		margin: 0 auto;
+		margin: 0 auto
+		;
 	}
 
 	.container-frame {
