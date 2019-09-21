@@ -230,19 +230,19 @@ html,
 }
 
 #popup {
-	background: url(../../assets/img/pop-bg.jpg);
+	background: url(../../assets/popup-bg-min.png);
 	height: 100vh;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-size: contain;
+	background-size: 170%;
 	/*display: none;*/
 }
 
 .overlay {
 	background: #000;
-	opacity: 0.4;
+	opacity: 0.3;
 	position: absolute;
 	top: 0;
 	bottom: -300px;
@@ -256,16 +256,31 @@ html,
 }
 
 .pop-up {
-	background: #fff url(../../assets/img/pop-frame.png);
-	background-size: contain;
-	height: 378px;
-	width: 430px;
+	background: #fff;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border: 2px solid #e5be00;
+    border-radius: 28px;
+    padding: 20px 0;
+    width: 70%;
+    overflow: hidden;
 }
+
+.pop-up:before {
+	content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px solid #008689;
+    border-radius: 15px;
+    z-index: 1;
+}
+
 
 .left-line {
 	transform: rotate(180deg);
@@ -280,8 +295,9 @@ html,
 }
 
 .stranger-tiger {
-	width: 120px;
-	margin: 0 auto;
+	width: 110px;
+	margin: 5px auto;
+	margin-top: 20px;
 }
 
 .logo img,
@@ -296,12 +312,14 @@ html,
 	width: 100%;
 	text-align: center;
 	margin: 15px auto;
+	margin-bottom: 25px;
 }
 
 .choice a {
 	text-decoration: none;
 	color: #000;
 	font-style: italic;
+	color: #008689;
 }
 
 .choice a:hover {
@@ -327,14 +345,30 @@ html,
 	background: #dec185;
 	height: 2px;
 	margin: 10px 0;
+	position: relative;
+}
+
+.choice-separater:before{
+	content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border: 2px solid #e5be00;
+    background: #fff;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -5px;
 }
 
 .tagline {
 	margin: 0 auto;
 	text-align: center;
 	text-transform: uppercase;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.2;
+	color: #008689;
 }
 
 .message p {
@@ -354,6 +388,8 @@ html,
 	font-style: italic;
 	text-align: center;
 	margin-bottom: 10px;
+	margin-top: 20px;
+	color: #008689;
 }
 
 .pop-up h3 {
@@ -361,11 +397,12 @@ html,
 	text-transform: uppercase;
 	font-size: 14px;
 	letter-spacing: 1px;
+	color: #008689;
 }
 
 .pop-up .main {
 	width: 80%;
-	margin: 0 10px;
+	margin: 20px 10px;
 }
 
 .mobile {
@@ -374,10 +411,26 @@ html,
 
 .first-vertical {
 	width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: 8px 0;
 }
 
 .last-vertical {
-	width: 7%;
+	width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    background: #fff;
+    padding: 8px 0;
 }
 
 .tagline {
@@ -401,8 +454,8 @@ html,
 }
 
 .logo {
-	width: 200px;
-	margin: 0 auto;
+	width: 150px;
+	margin: 0 auto 20px auto;
 }
 
 #hero {
@@ -818,20 +871,13 @@ input::placeholder {
 		width: 9%;
 	}
 	
-	.pop-up {
-		background: #fff url(../../assets/img/mobile-pop-frame.png);
-		background-size: 100%;
-		width: 276px;
-		height: 321px;
-		background-repeat: no-repeat;
-	}
 	
 	.logo {
 		width: 100px;
 	}
 	
 	.tagline {
-		display: none;
+		font-size: 14px;
 	}
 	
 	.pop-up h3 {
@@ -962,6 +1008,14 @@ input::placeholder {
 		width: 100%;
 	}
 
+	.pop-up {
+		width: 100%;
+	}
+
+	.container {
+		width: 60%;
+	}
+
 	.action {
 		padding: 0;
 	}
@@ -995,6 +1049,10 @@ input::placeholder {
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
 	#hero .main {
+		width: 100%;
+	}
+
+	.pop-up {
 		width: 100%;
 	}
 
