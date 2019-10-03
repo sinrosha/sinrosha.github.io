@@ -230,7 +230,7 @@ html,
 }
 
 #popup {
-	background: url(../../assets/popup-bg-min.png);
+	background: url(../../assets/bg-img.jpg);
 	height: 100vh;
 	width: 100vw;
 	display: flex;
@@ -251,12 +251,12 @@ html,
 }
 
 .container {
-	width: 50%;
+	width: 470px;
 	margin: 0 auto;
 }
 
 .pop-up {
-	background: #fff;
+	background: #fcfff0;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
@@ -265,7 +265,7 @@ html,
 	border: 2px solid #e5be00;
     border-radius: 28px;
     padding: 20px 0;
-    width: 70%;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -378,6 +378,7 @@ html,
 	font-size: 16px;
 	margin: 15px 30px;
 	font-weight: 600;
+	color: #008689;
 	display: none;
 }
 
@@ -419,7 +420,7 @@ html,
     justify-content: center;
     position: relative;
     z-index: 2;
-    background: #fff;
+    background: #fcfff0;
     padding: 8px 0;
 }
 
@@ -431,7 +432,7 @@ html,
     justify-content: center;
     position: relative;
     z-index: 2;
-    background: #fff;
+    background: #fcfff0;
     padding: 8px 0;
 }
 
@@ -694,7 +695,7 @@ input::placeholder {
 .info-box {
 	width: 46%;
     text-align: center;
-    background: #fff;
+    background: #fcfff0;
     height: 95%;
     border: 2px solid #e1b400;
     border-radius: 20px;
@@ -1015,7 +1016,7 @@ input::placeholder {
 	}
 
 	.container {
-		width: 60%;
+		width: 470px;
 	}
 
 	.action {
@@ -1219,6 +1220,7 @@ input::placeholder {
 		    height: 100%;
 		    background: url(../../test/eye.svg) no-repeat center center;
 		    background-size: contain;
+		    background-color: #fcfff0;
 		    transition: all 2s;
 		    height: 120px;
 		}
@@ -1231,6 +1233,7 @@ input::placeholder {
 		.frame-new {
 			 background: url(../../test/eye-frame.svg) no-repeat center center;
 			 background-size: contain;
+			 background-color: #fcfff0;
 		}
 
 		.aspect-ratio-box:after {
