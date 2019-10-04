@@ -242,7 +242,7 @@ html,
 
 .overlay {
 	background: #000;
-	opacity: 0.3;
+	opacity: 0.2;
 	position: absolute;
 	top: 0;
 	bottom: -300px;
@@ -337,9 +337,7 @@ html,
 	flex: 1;
 }
 
-.below-25 {
-	flex: 2;
-}
+
 
 .choice-separater {
 	background: #dec185;
@@ -712,7 +710,7 @@ input::placeholder {
 }
 
 .social-icons {
-	width: 200px;
+	width: 250px;
 	margin: 2vh auto;
 	margin-top: 8vh;
 }
@@ -845,7 +843,7 @@ input::placeholder {
 
 @media screen and (max-width: 767px) and (min-width: 320px) {
 	#popup {
-		background-size: 170%;
+		background-size: 450%;
 	}
 	
 	.book {
@@ -881,6 +879,7 @@ input::placeholder {
 	
 	.tagline {
 		font-size: 14px;
+		display: none;
 	}
 	
 	.pop-up h3 {
@@ -898,6 +897,7 @@ input::placeholder {
 	
 	.stranger-tiger {
 		width: 100px;
+		margin-bottom: 0;
 	}
 	
 	section {
@@ -929,6 +929,8 @@ input::placeholder {
 		margin: 0!important;
 	}
 }
+
+
 
 @media screen and (min-width: 1450px) {
 /*	form {
@@ -1378,7 +1380,7 @@ input::placeholder {
 
 	.info-box h1 {
 		font-size: 4vh;
-		line-height: 4vh;
+		line-height: 5vh;
 		margin: 2vh auto;
 	}
 
@@ -1452,6 +1454,20 @@ input::placeholder {
 
 	.container-frame .aspect-ratio-box:after, .container-frame .aspect-ratio-box:before {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 1023px) and (min-width: 800px) { 
+	.info-box {
+		width: 85%;
+	}
+
+	.info-box .content {
+		width: 100%;
+	}
+
+	.info-box h1 {
+		font-size: 48px;
 	}
 }
 
