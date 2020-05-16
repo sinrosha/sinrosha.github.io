@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$("#above25").on("click", function(e) {
 		
        $("#popup").fadeOut(1000, function() {
-       	  $("#hero").fadeIn(2000);
+       	  $("#hero").fadeIn(2000).css("display", "flex");
           $(".info-box").fadeIn(2000);
        });
        // $("#hero").fadeIn();
@@ -64,23 +64,29 @@ $(document).ready(function() {
 	 
   }); 
   
-  $(".submit").on("click", function(e) {
+  $(".submit-new").on("click", function(e) {
      e.preventDefault();
 	  var val = $('#email').val();
      if(val && isEmail(val)) {
-	 $(".submit, label, input").fadeOut();
+         $(".submit-msg-new").css("padding", "0");
+         $("body").addClass("sent");
+         $(".frame-new").css("background", "none")
+	 $(".submit-new, label, input").fadeOut();
      $('#email').css("border","0 solid red");
        $.ajax({
         type: 'POST',
         url: 'https://strangerandsons.com/src/js/sendmembertolist.php',
         data: { email: val },
         success: function(response) {
-          // $(".submit-msg").html(response); 
-          // alert('test'+response);
+          //$(".submit-msg-new").html(response); 
+          //alert('test'+response);
+          
+         
+          
         }
     });
   
-     $(".submit-msg").fadeIn(3000);
+     $(".submit-msg-new").fadeIn(3000);
 	 }else {
 		  $('#email').css("border","1px solid red");
 	 }
@@ -139,28 +145,107 @@ window.addEventListener('resize', () => {
   // We execute the same script as before
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
-<<<<<<< HEAD
 });
 
 
 
 if($(window).width() <= 768){
   $("#email").on("focus", function() {
- $(".content").fadeOut();
-});
-$("#email").on("focusout", function() {
- $(".content").fadeIn();
-});
+    $(".content").fadeOut();
+  });
+  $("#email").on("focusout", function() {
+    $(".content").fadeIn();
+  });
 }
-||||||| merged common ancestors
+
+// Test JS
+
+// if($(window).width() >= 768) {
+//   $('.eye-new').click(function() {
+//     $('.eye-new').animate({ 
+//         deg: 180 
+//       },
+//       {
+//           duration: 200,
+//           easing: "linear",
+//           step: function(now) {
+//             $(this).css({ transform: 'rotate(' + now + 'deg)' });
+//           },
+//           complete: function() {  
+//             $(".container-form").delay("2000").animate({width: 0}, function() {
+//               $(".eye-new").fadeOut("2000", function() {
+//                 $(".container-form").addClass("open-new");
+//                 $(".frame-new").fadeIn("500", function() {
+//                   $(".container-form").animate({width: "380px"}, function() {
+//                     $(".submit-new").fadeIn("1000", function() {
+//                       $(".form-new").fadeIn("1000");
+//                     });
+//                   });
+//                 });
+//               });
+//             });
+//           }
+//       }
+//     );
+//   });
+// }
+
+$(".eye-new").on("click", function(){
+  $(".container-form").animate(
+    {"opacity": 0}, 
+    {
+      duration: 500,
+      complete: function() {
+        $(".container-form").fadeIn("500", function() {
+          $(".container-frame").fadeIn("500", function() {
+            $(".container-form").fadeOut("1000");
+            $(this).animate({"opacity": 1}, {duration: 1000});
+          });
+        });
+      }
+    });
+ 
 });
 
-$("#email").on("focus", function() {
- $(".content").fadeOut();
+
+// if($(window).width() <= 767) {
+//   $('.eye-new').click(function() {
+//     $('.eye-new').animate({ 
+//         deg: 180 
+//       },
+//       {
+//           duration: 200,
+//           easing: "linear",
+//           step: function(now) {
+//             $(this).css({ transform: 'rotate(' + now + 'deg)' });
+//           },
+//           complete: function() {  
+//             $(".container-form").delay("2000").animate({width: 0}, function() {
+//               $(".eye-new").fadeOut("2000", function() {
+//                 $(".container-form").addClass("open-new");
+//                 $(".frame-new").fadeIn("500", function() {
+//                   $(".container-form").animate({width: "220px"}, function() {
+//                     $(".submit-new").fadeIn("1000", function() {
+//                       $(".form-new").fadeIn("1000");
+//                     });
+//                   });
+//                 });
+//               });
+//             });
+//           }
+//       }
+//     );
+//   });
+// }
+
+$(".eye-new").on("mouseover", function() {
+  $(this).css("animation-play-state", "paused");
+  $(this).css("animation", "none");
 });
-$("#email").on("focusout", function() {
- $(".content").fadeIn();
-});
-=======
-});
->>>>>>> 0784f86c22be673c5604e9a09f1ee0c1d55276a3
+
+$(".eye-new").on("mouseleave", function() {
+  $(this).css("animation-play-state", "running");
+  $(this).css("animation", "pulse 700ms linear infinite alternate");
+})
+
+
