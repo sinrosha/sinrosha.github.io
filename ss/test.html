@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Testing Form</title>
+	<link rel="stylesheet" type="text/css" href="../src/css/style.css">
+	<style type="text/css">
+
+		.container-form {
+			width: 80px;
+			margin: 50px auto;
+			transition: all 1s;
+			background:red;
+		}
+
+		.aspect-ratio-box {
+		    height: 120px;
+		    width: 100%;
+		    background: white;
+		    position: relative;
+		}
+
+		.eye-new,
+		.frame-new {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    background: url(test/eye.svg) no-repeat center center;
+		    background-size: contain;
+		    transition: all 2s;
+		    height: 120px;
+		}
+
+		.frame-new {
+			 background: url(test/eye-frame.svg) no-repeat center center;
+			 background-size: contain;
+			 display: none;
+		}
+
+		.aspect-ratio-box:after {
+		    content: url(test/dingbat_right.svg);
+		    position: absolute;
+		    width: 70px;
+		    position: absolute;
+		    top: 50%;
+		    right: 0;
+		    height: 38px;
+		    display: flex;
+		    align-items: center;
+		    margin-top: -19px;
+		    margin-right: -70px;
+		}
+
+		.open .aspect-ratio-box:after,
+		.open .aspect-ratio-box:before {
+			top: 61%;
+		}
+
+		.aspect-ratio-box:before {
+		   	content: url(test/dingbat_left.svg);
+		    position: absolute;
+		    width: 70px;
+		    position: absolute;
+		    top: 50%;
+		    left: 0;
+		    height: 38px;
+		    display: flex;
+		    align-items: center;
+		    margin-top: -19px;
+		    margin-left: -70px;
+		}
+
+		.form-new {
+			position: absolute;
+			width: 100%;
+			bottom: 22px;
+			text-align: center;
+			display: none;
+			transition: all 2s;
+		}
+
+		.label-new {
+			font-family: 'EB Garamond';
+		    color: #bb8b2b;
+		    font-size: 14px;
+		    padding: 8px 0;
+		    font-weight: 400;
+		}
+
+		.input-new[type="text"] {
+		    border: 0;
+		    outline: 0;
+		    background: #333333;
+		    padding: 4px 0 6px 0;
+		    color: #fff;
+		    font-size: 14px;
+		    text-align: center;
+		    margin: 0 10px;
+		    border-radius: 2px;
+		}
+
+		.submit-msg-new {
+		    display: none;
+		    font-family: 'EB Garamond', serif;
+		    font-style: italic;
+		    color: #8a6717;
+		    font-size: 16px;
+		    line-height: 140%;
+		    padding: 30px;
+		}
+
+		.input-new[type="text"]::placeholder {
+			text-align:center;
+			color: #fff;
+			border: 0;
+			outline: 0;
+			font-family: raleway;
+			font-style: italic;
+			background: #333333;
+		}
+
+		.label-new,
+		.input-new[type="text"] {
+			width: 85%;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.input-new[type="text"] {
+			width: 80%;
+		}
+
+		.submit-new {
+			position: absolute;
+		    bottom: -30px;
+		    left: 50%;
+		    width: 50px;
+		    display: none;
+		    margin-left: -10px;
+		}
+
+		.submit-new img {
+			width: 100%;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container-form">
+		<div class="aspect-ratio-box">
+        	<div class="eye-new"></div>
+        	<div class="frame-new">
+        		<form autocomplete="off" class="form-new">
+                	<label class="label-new" for="email">Tell Us Where We Can Find You, So You Can Find Us</label>
+                	<input 
+                		class="input-new"
+            			type="text" 
+            			id="email" 
+            			name="email" 
+            			placeholder="Enter E-mail Address" 
+            			onfocus="this.placeholder = ''" 
+            			onblur="this.placeholder = 'Enter E-mail Addess'"
+                	>
+               	 	<p class="submit-msg-new">Thank you for trusting us, we will be in touch!</p>
+              </form>
+
+                <div class="submit-new">
+		          	<img src="test/send.png" alt="Submit" />
+		        </div>
+        	</div>
+   		</div>
+	</div>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+
+
+$('.eye-new').click(function() {
+	$('.eye-new').animate({ 
+			deg: 180 
+		},
+		{
+		    duration: 200,
+		    easing: "linear",
+		    step: function(now) {
+		    	$(this).css({ transform: 'rotate(' + now + 'deg)' });
+		    },
+		    complete: function() {	
+		    	$(".container-form").delay("2000").animate({width: 0}, function() {
+		    		$(".eye-new").fadeOut("2000", function() {
+		    			$(".container-form").addClass("open");
+		    			$(".frame-new").fadeIn("500", function() {
+		    				$(".container-form").animate({width: "380px"}, function() {
+		    					$(".submit-new").fadeIn("1000", function() {
+		    						$(".form-new").fadeIn("1000");
+		    					});
+		    				});
+		    			});
+		    		});
+		    	});
+	   		}
+		}
+	);
+});
+  </script>
+</body>
+</html>
