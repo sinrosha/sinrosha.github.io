@@ -212,19 +212,19 @@ table {
 	}
 }
 
-to {
+/* to {
 	-webkit-transform: scale3d(1.05, 1.05, 1.05);
 	transform: scale3d(1.05, 1.05, 1.05);
 }
 
 
-}
+} */
 * {
 	box-sizing: border-box;
 }
 
 body,
-html,
+html
 {
 	background: #000!important;
 }
@@ -237,7 +237,7 @@ html,
 	justify-content: center;
 	align-items: center;
 	background-size: 170%;
-	/*display: none;*/
+	display: none;
 }
 
 .overlay {
@@ -468,8 +468,9 @@ html,
 	background: url(../../new-bg.jpg) no-repeat center bottom;
 	background-size: cover;
 	height: 100vh;
- 	height: calc(var(--vh, 1vh) * 100)!important;
- }
+	height: calc(var(--vh, 1vh) * 100)!important;
+	display: flex; 	
+}
 
 #hero .main {
 	width: 75%;
@@ -523,7 +524,7 @@ html,
 .footer .call {
 	visibility: hidden;
 }
-3
+
 .instagram img,
 .call img {
 	max-width: 100%;
@@ -679,6 +680,8 @@ input::placeholder {
 	justify-content: center;
 	position: relative;
 	align-items: center;
+	opacity: 0;
+	transition: all 1s;
 }
 
 #bg {
@@ -702,7 +705,7 @@ input::placeholder {
     height: 95%;
     border: 2px solid #e1b400;
     border-radius: 20px;
-     display: flex;
+    display: flex;
     align-items: center;
 }
 
@@ -846,6 +849,142 @@ input::placeholder {
     width:100%;
 }
 
+.before-hero {
+	position: relative;
+	height: 100vh;
+	background: url(../../assets/img/before-hero-bg.jpg) no-repeat bottom center;
+	background-size: cover;
+}
+
+.bottle {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -17vh;
+	transition: all 2.5s;
+}
+
+.bottle.fade {
+	transform: translateY(-1024px);
+}
+
+.bottle img {
+	width: 34vh;
+}
+
+.scroll {
+	position: absolute;
+    width: 40px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -20px;
+}
+
+.scroll img {
+	width: 100%;
+}
+
+.sun-card {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 100vh;
+	position: relative;
+	transition: all 1s;
+}
+
+.sun-card.active,
+.moon-card.active {
+	transform: translateX(0)!important;
+}
+
+
+.moon-card {
+	width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	height: 100vh;
+	position: absolute;
+	top:0;
+	right: 0;
+	transition: all 1s;
+}
+
+.card-container {
+	background: #fffcd5;
+	height: 90vh;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	position: relative;
+	padding: 60px 40px;
+	text-align: center;
+}
+
+.moon-card .card-container {
+	border-radius: 0;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+.moon-card .card-container:before {
+	border-radius: 0;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	right: 0;
+	left: 10px;
+}
+
+
+.card-container:before {
+	content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 10px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    bottom: 10px;
+    border: 2px solid #383e53;
+}
+
+.card-logo {
+	width: 100px;
+	margin: 0 auto
+}
+
+.card-logo img {
+	width: 100%;
+}
+
+.card-container h3 {
+	color: #383e54	;
+	font-family: 'EB Garamond', serif;
+	font-weight: 600;
+	margin: 30px 0;
+    font-size: 36px;
+}
+
+.card-container p {
+	color: #383e54;
+	margin-bottom: 20px;
+	font-family: raleway;
+	line-height: 1.8;
+	font-weight: 600;
+}
+
+.card-container p:last-of-type {
+	margin-bottom: 0;
+}
+
+.float {
+	cursor: pointer;
+}
+.float img {
+	width: 100%;
+}
+
 @media screen and (max-width: 767px) and (min-width: 320px) {
 	#popup {
 		background-size: 450%;
@@ -934,8 +1073,6 @@ input::placeholder {
 		margin: 0!important;
 	}
 }
-
-
 
 @media screen and (min-width: 1450px) {
 /*	form {
@@ -1192,6 +1329,7 @@ input::placeholder {
 		display: none;
 	}
 }
+
 
 
 /*Test Css*/
@@ -1474,6 +1612,21 @@ input::placeholder {
 	.info-box h1 {
 		font-size: 48px;
 	}
+}
+
+
+.floating {  
+    animation-name: floating;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	cursor: pointer;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }
 
    

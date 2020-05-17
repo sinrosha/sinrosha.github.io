@@ -91,6 +91,33 @@ $(document).ready(function() {
 		  $('#email').css("border","1px solid red");
 	 }
   });
+
+  var floatWidth = document.querySelector(".float").offsetWidth;
+  var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
+  console.log("Flaot Width", floatWidth, "ContainerWidth", containerWidth);
+  $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
+  $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+
+  window.addEventListener('resize', () => {
+    var floatWidth = document.querySelector(".float").offsetWidth;
+    var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
+    $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
+    $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+  });
+
+  $(".float").on("click", function() {
+    $(this).parent().toggleClass("active");
+  })
+
+  $(".floating").on("click", function() {
+    $(".bottle").addClass("fade");
+    $(".before-hero").fadeOut(2000, function() {
+      $("#hero").css("display", "flex");
+      $("#hero").animate({opacity: 1});
+    });
+  })
+
+
 });
 function isEmail(email) {
   var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -234,7 +261,7 @@ $(".eye-new").on("click", function(){
 //             });
 //           }
 //       }
-//     );
+//     );hero
 //   });
 // }
 
