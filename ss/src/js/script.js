@@ -9,8 +9,8 @@ $(document).ready(function() {
 	$("#above25").on("click", function(e) {
 		
        $("#popup").fadeOut(1000, function() {
-       	  $("#hero").fadeIn(2000).css("display", "flex");
-          $(".info-box").fadeIn(2000);
+       	  // $(".before-hero").fadeIn(2000).css("display", "flex");
+          // $(".info-box").fadeIn(2000);
        });
        // $("#hero").fadeIn();
        e.preventDefault();
