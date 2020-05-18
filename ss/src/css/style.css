@@ -701,12 +701,16 @@ input::placeholder {
 .info-box {
 	width: 46%;
     text-align: center;
-    background: #fcfff0;
     height: 95%;
-    border: 2px solid #e1b400;
     border-radius: 20px;
     display: flex;
-    align-items: center;
+	align-items: center;
+	transition: all 1s;
+}
+
+.info-box.loaded {
+	background: #fcfff0;
+	border: 2px solid #e1b400;
 }
 
 .blue-frame {
@@ -715,12 +719,15 @@ input::placeholder {
 	margin: 0 auto;
 	border: 2px solid #008689;
 	border-radius: 10px;
+	display: none;
+	transition: all 1s;
 }
 
 .social-icons {
 	width: 250px;
 	margin: 2vh auto;
 	margin-top: 8vh;
+	display: none;
 }
 
 
@@ -743,7 +750,8 @@ input::placeholder {
 
 .info-box .content {
 	width: 60vh;
-    margin: 0 auto;
+	margin: 0 auto;
+	display: none;
 }
 
 
@@ -984,6 +992,8 @@ input::placeholder {
 .float img {
 	width: 100%;
 }
+
+
 
 @media screen and (max-width: 767px) and (min-width: 320px) {
 	#popup {
@@ -1337,8 +1347,9 @@ input::placeholder {
 		.container-form {
 			width: 80px;
 			margin: 30px auto 20px;
-			opacity: 1;
-			transition: all 0.6s;
+			opacity: 0;
+			transition: all 1s;
+			display: none;
 		}
 
 		.container-frame {
@@ -1627,6 +1638,13 @@ input::placeholder {
     from { transform: translate(0,  0px); }
     65%  { transform: translate(0, 15px); }
     to   { transform: translate(0, -0px); }    
+}
+
+@media screen and (max-height: 800px) and (min-width: 1024px) {
+	.card-container p {
+		font-size: 14px;
+		line-height: 1.6;
+	}
 }
 
    

@@ -113,7 +113,18 @@ $(document).ready(function() {
     $(".bottle").addClass("fade");
     $(".before-hero").fadeOut(2000, function() {
       $("#hero").css("display", "flex");
-      $("#hero").animate({opacity: 1});
+      $("#hero").animate({opacity: 1}, 1500, function() {
+        $(".info-box").addClass("loaded");
+        $(".blue-frame").fadeIn(2000, function() {
+          $(".social-icons").fadeIn(1000, function() {
+            $(".info-box .content").fadeIn(1000, function() {
+              $(".container-form").fadeIn(function() {
+                $(".container-form").animate({opacity: 1});
+              });
+            });
+          });
+        });
+      });
     });
   })
 
