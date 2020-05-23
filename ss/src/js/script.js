@@ -7,6 +7,12 @@ $(document).ready(function() {
 	});
 
 	$("#above25").on("click", function(e) {
+
+    var floatWidth = document.querySelector(".float").offsetWidth;
+    var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
+    console.log("Flaot Width", floatWidth, "ContainerWidth", containerWidth);
+    $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
+    $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
 		
        $("#popup").fadeOut(1000, function() {
        	  $(".before-hero").fadeIn(2000).css("display", "flex");
@@ -92,12 +98,29 @@ $(document).ready(function() {
 	 }
   });
 
-  var floatWidth = document.querySelector(".float").offsetWidth;
-  var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
-  console.log("Flaot Width", floatWidth, "ContainerWidth", containerWidth);
-  $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
-  $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+  // var floatWidth = document.querySelector(".float").offsetWidth;
+  // var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
+  // console.log("Flaot Width", floatWidth, "ContainerWidth", containerWidth);
+  // $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
+  // $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
 
+  window.addEventListener('resize', () => {
+    var floatWidth = document.querySelector(".float").offsetWidth;
+    var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
+    $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
+    $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+  });
+
+  $("#float-moon").on("click", function() {
+    $("#float-sun").parent().removeClass("active");
+    $(this).parent().toggleClass("active");
+  })
+
+
+  $("#float-sun").on("click", function() {
+    $("#float-moon").parent().removeClass("active");
+    $(this).parent().toggleClass("active");
+  })
   window.addEventListener('resize', () => {
     var floatWidth = document.querySelector(".float").offsetWidth;
     var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
@@ -287,3 +310,30 @@ $(".eye-new").on("mouseleave", function() {
 //     });
 //   });
 // }
+
+
+var colors = ["#383E54", "#9D402F"]
+var currentColor = 0
+var lis = document.querySelectorAll("#secret")
+
+function changeColor() {
+  --currentColor
+  if (currentColor < 0) currentColor = colors.length -1
+  for (var i = 0; i < lis.length; i++) {
+    lis[i].style.color = colors[(currentColor +i) % colors.length]
+  }
+}
+
+setInterval(changeColor, 1000);
+
+
+
+$('#secret').on({
+  mouseenter: function () {
+    $('.cursor-bottle').fadeIn(200);
+  },
+  mouseleave: function () {
+    $('.cursor-bottle').fadeOut(200);
+  }
+});
+

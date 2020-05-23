@@ -321,7 +321,7 @@ html
 
 .choice a {
 	text-decoration: none;
-	color: #000;
+	font-weight: 600;
 	font-style: italic;
 	color: #383E54;
 }
@@ -387,7 +387,7 @@ html
 .pop-up h2 {
 	font-family: 'EB Garamond', serif;
 	font-size: 22px;
-	font-weight: 500;
+	font-weight: 600;
 	font-style: italic;
 	text-align: center;
 	margin-bottom: 10px;
@@ -675,12 +675,11 @@ input::placeholder {
 #hero {
 	margin: 0;
 	padding: 0;
-	display: none;
 	justify-content: center;
 	position: relative;
 	align-items: center;
 	opacity: 1;
-	transition: all 1s;
+	transition: all 0.6s;
 }
 
 #bg {
@@ -707,7 +706,7 @@ input::placeholder {
 	align-items: center;
 	background: #FFFBD4;
 	border: 2px solid #383E54;
-	transition: all 1s;
+	transition: all 0.6s;
 }
 
 .blue-frame {
@@ -716,7 +715,8 @@ input::placeholder {
 	margin: 0 auto;
 	border: 2px solid #383E54;
 	border-radius: 10px;
-	transition: all 1s;
+	transition: all 0.6s;
+	position: relative;
 }
 
 .social-icons {
@@ -748,7 +748,7 @@ input::placeholder {
 
 .info-box .content {
 	width: 60vh;
-	margin: 0 auto;
+	margin: 0 auto;		
 }
 
 
@@ -758,6 +758,7 @@ input::placeholder {
 	left: 50%;
 	width: 12%;
 	margin-left: -6%;
+	z-index: 2;
 }
 
 .logo-top {
@@ -785,7 +786,7 @@ input::placeholder {
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 10px;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .info-box p:last-child {
@@ -854,28 +855,7 @@ input::placeholder {
     width:100%;
 }
 
-.before-hero {
-	position: relative;
-	height: 100vh;
-	background: url(../../assets/img/before-hero-bg.jpg) no-repeat bottom center;
-	background-size: cover;
-}
 
-.bottle {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	margin-left: -17vh;
-	transition: all 2.5s;
-}
-
-.bottle.fade {
-	transform: translateY(-1024px);
-}
-
-.bottle img {
-	width: 34vh;
-}
 
 .scroll {
 	position: absolute;
@@ -895,7 +875,8 @@ input::placeholder {
     align-items: center;
     justify-content: center;
 	height: 100vh;
-	position: relative;
+	position: absolute;
+	left: 0;
 	transition: all 1s;
 }
 
@@ -919,11 +900,12 @@ input::placeholder {
 
 .card-container {
 	background: #fffcd5;
-	height: 90vh;
+	height: 95vh;
 	border-top-right-radius: 20px;
 	border-bottom-right-radius: 20px;
 	position: relative;
 	padding: 60px 40px;
+
 	text-align: center;
 }
 
@@ -973,6 +955,8 @@ input::placeholder {
 
 .card-container p {
 	color: #383e54;
+	width: 80%;
+	margin: 0 auto;
 	margin-bottom: 20px;
 	font-family: raleway;
 	line-height: 1.8;
@@ -1343,7 +1327,7 @@ input::placeholder {
 		.container-form {
 			width: 80px;
 			margin: 30px auto 20px;
-			transition: all 1s;
+			transition: all 0.6s;
 		
 		}
 
@@ -1642,4 +1626,38 @@ input::placeholder {
 	}
 }
 
-   
+#secret {
+	transition: all 0.6s;
+	cursor: pointer;
+	position: relative;
+	z-index: 3;
+}
+
+/* #secret:before {
+	content: url("../../assets/img/cursor-image.png");
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	transform: scale(0.2);
+	border-radius: 50%;
+} */
+
+.float {
+	width: 180px;
+}
+
+.cursor-bottle {
+	width: 400px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	display: none;
+}
+
+.cursor-bottle img {
+	width: 100%;
+	display: block;
+	border-radius: 50%;
+}
