@@ -230,13 +230,13 @@ html
 }
 
 #popup {
-	background: url(../../assets/bg-img.jpg);
+	background: url(../../assets/img/bg-img-popup.jpg) no-repeat center center;
 	height: 100vh;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-size: 170%;
+	background-size: cover;
 }
 
 .overlay {
@@ -255,13 +255,13 @@ html
 }
 
 .pop-up {
-	background: #fcfff0;
+	background: #FFFBD4;
 	margin: 0 auto;
 	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border: 2px solid #e5be00;
+	border: 2px solid #383E54;
     border-radius: 28px;
     padding: 20px 0;
     width: 100%;
@@ -275,7 +275,7 @@ html
     left: 15px;
     right: 15px;
     bottom: 15px;
-    border: 2px solid #008689;
+    border: 2px solid #383E54;
     border-radius: 15px;
     z-index: 1;
 }
@@ -323,7 +323,7 @@ html
 	text-decoration: none;
 	color: #000;
 	font-style: italic;
-	color: #008689;
+	color: #383E54;
 }
 
 .choice a:hover {
@@ -344,7 +344,7 @@ html
 
 
 .choice-separater {
-	background: #dec185;
+	background: #C9C39D;
 	height: 2px;
 	margin: 10px 0;
 	position: relative;
@@ -355,7 +355,7 @@ html
     position: absolute;
     height: 10px;
     width: 10px;
-    border: 2px solid #e5be00;
+    border: 2px solid #C9C39D;
     background: #fff;
     border-radius: 50%;
     left: 50%;
@@ -370,7 +370,7 @@ html
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 1.2;
-	color: #008689;
+	color: #383E54;
 }
 
 .message p {
@@ -380,7 +380,7 @@ html
 	font-size: 16px;
 	margin: 15px 30px;
 	font-weight: 600;
-	color: #008689;
+	color: #383E54;
 	display: none;
 }
 
@@ -392,7 +392,7 @@ html
 	text-align: center;
 	margin-bottom: 10px;
 	margin-top: 20px;
-	color: #008689;
+	color: #383E54;
 }
 
 .pop-up h3 {
@@ -400,7 +400,7 @@ html
 	text-transform: uppercase;
 	font-size: 14px;
 	letter-spacing: 1px;
-	color: #008689;
+	color: #383E54;
 }
 
 .pop-up .main {
@@ -422,7 +422,7 @@ html
     justify-content: center;
     position: relative;
     z-index: 2;
-    background: #fcfff0;
+    background: #FFFBD4;
     padding: 8px 0;
 }
 
@@ -434,7 +434,7 @@ html
     justify-content: center;
     position: relative;
     z-index: 2;
-    background: #fcfff0;
+    background: #FFFBD4;
     padding: 8px 0;
 }
 
@@ -464,7 +464,7 @@ html
 }
 
 #hero {
-	background: url(../../new-bg.jpg) no-repeat center bottom;
+	background: url(../../assets/img/bg-img-hero.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100)!important;
@@ -679,7 +679,7 @@ input::placeholder {
 	justify-content: center;
 	position: relative;
 	align-items: center;
-	opacity: 0;
+	opacity: 1;
 	transition: all 1s;
 }
 
@@ -702,23 +702,20 @@ input::placeholder {
     text-align: center;
     height: 95%;
     border-radius: 20px;
-    display: flex;
+	display: flex;
+	margin: 0 auto;
 	align-items: center;
+	background: #FFFBD4;
+	border: 2px solid #383E54;
 	transition: all 1s;
-}
-
-.info-box.loaded {
-	background: #fcfff0;
-	border: 2px solid #e1b400;
 }
 
 .blue-frame {
 	width: calc(100% - 2vw);
 	height: calc(100% - 2vw);
 	margin: 0 auto;
-	border: 2px solid #008689;
+	border: 2px solid #383E54;
 	border-radius: 10px;
-	display: none;
 	transition: all 1s;
 }
 
@@ -728,6 +725,8 @@ input::placeholder {
 	margin-top: 8vh;
 	display: none;
 }
+
+
 
 
 .social-icons ul {
@@ -750,7 +749,6 @@ input::placeholder {
 .info-box .content {
 	width: 60vh;
 	margin: 0 auto;
-	display: none;
 }
 
 
@@ -775,7 +773,7 @@ input::placeholder {
 	font-size: 4.5vh;
 	line-height: 5vh;
 	margin: 2.5vh auto;
-	color: #008588;
+	color: #383E54;
 	font-weight: 600;
 }
 
@@ -783,7 +781,7 @@ input::placeholder {
 	line-height: 3.2vh;
 	font-size: 1.9vh;
 	font-family: 'Raleway', sans-serif;
-	color: #008588;
+	color: #383E54;
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 10px;
@@ -985,11 +983,10 @@ input::placeholder {
 	margin-bottom: 0;
 }
 
-.float {
-	cursor: pointer;
-}
-.float img {
-	width: 100%;
+
+
+.info-box .content {
+	margin-top: 8vh;
 }
 
 
@@ -1346,9 +1343,8 @@ input::placeholder {
 		.container-form {
 			width: 80px;
 			margin: 30px auto 20px;
-			opacity: 0;
 			transition: all 1s;
-			display: none;
+		
 		}
 
 		.container-frame {
@@ -1375,7 +1371,7 @@ input::placeholder {
 		    height: 100%;
 		    background: url(../../test/eye.svg) no-repeat center center;
 		    background-size: contain;
-		    background-color: #fcfff0;
+		    background-color: #FFFBD4;
 		    transition: all 2s;
 		    height: 120px;
 		}
@@ -1388,7 +1384,7 @@ input::placeholder {
 		.frame-new {
 			 background: url(../../test/eye-frame.svg) no-repeat center center;
 			 background-size: contain;
-			 background-color: #fcfff0;
+			 background-color: #FFFBD4;
 		}
 
 		.aspect-ratio-box:after {
@@ -1527,7 +1523,7 @@ input::placeholder {
 		width: 90%;
 	}
 
-	.social-icons {
+	.social-icons, .info-box .content {
 		margin-top: 7vh;
 	}
 

@@ -9,10 +9,10 @@ $(document).ready(function() {
 	$("#above25").on("click", function(e) {
 		
        $("#popup").fadeOut(1000, function() {
-       	  // $(".before-hero").fadeIn(2000).css("display", "flex");
-          // $(".info-box").fadeIn(2000);
+       	  $(".before-hero").fadeIn(2000).css("display", "flex");
+          $(".info-box").fadeIn(2000);
        });
-       // $("#hero").fadeIn();
+       $("#hero").css("display", "flex");
        e.preventDefault();
 	});
 
@@ -105,17 +105,10 @@ $(document).ready(function() {
     $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
   });
 
-  $(".float").on("click", function() {
-    $(this).parent().toggleClass("active");
-  })
 
-  $(".floating").on("click", playTheMusic);
 
-  $(window).bind('mousewheel DOMMouseScroll', function(event){
 
-    playTheMusic();
 
-});
 
 
 });
@@ -276,21 +269,21 @@ $(".eye-new").on("mouseleave", function() {
 })
 
 
-function playTheMusic() {
-  $(".bottle").addClass("fade");
-  $(".before-hero").fadeOut(1000, function() {
-    $("#hero").css("display", "flex");
-    $("#hero").animate({opacity: 1}, 700, function() {
-      $(".info-box").addClass("loaded");
-      $(".blue-frame").fadeIn(1000, function() {
-        $(".social-icons").fadeIn(200, function() {
-          $(".info-box .content").fadeIn(200, function() {
-            $(".container-form").fadeIn(function() {
-              $(".container-form").animate({opacity: 1});
-            });
-          });
-        });
-      });
-    });
-  });
-}
+// function playTheMusic() {
+//   $(".bottle").addClass("fade");
+//   $(".before-hero").fadeOut(1000, function() {
+//     $("#hero").css("display", "flex");
+//     $("#hero").animate({opacity: 1}, 700, function() {
+//       $(".info-box").addClass("loaded");
+//       $(".blue-frame").fadeIn(1000, function() {
+//         $(".social-icons").fadeIn(200, function() {
+//           $(".info-box .content").fadeIn(200, function() {
+//             $(".container-form").fadeIn(function() {
+//               $(".container-form").animate({opacity: 1});
+//             });
+//           });
+//         });
+//       });
+//     });
+//   });
+// }
