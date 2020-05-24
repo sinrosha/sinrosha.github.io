@@ -230,13 +230,20 @@ html
 }
 
 #popup {
-	background: url(../../assets/img/bg-img-popup.jpg) no-repeat center center;
 	height: 100vh;
 	width: 100vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-size: cover;
+}
+
+.webp #popup {
+	background: url(../../assets/build/bg-img-popup.webp) no-repeat center center;
+}
+
+.no-webp #popup {
+	background: url(../../assets/img/bg-img-popup.jpg) no-repeat center center;
 }
 
 .overlay {
@@ -464,11 +471,18 @@ html
 }
 
 #hero {
-	background: url(../../assets/img/bg-img-hero.jpg) no-repeat center center;
 	background-size: cover;
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100)!important;
 	display: flex; 	
+}
+
+.webp #hero {
+	background: url(../../assets/build/bg-img-hero.webp) no-repeat center center;
+}
+
+.no-webp #hero {
+	background: url(../../assets/img/bg-img-hero.jpg) no-repeat center center;
 }
 
 #hero .main {
@@ -775,7 +789,7 @@ input::placeholder {
 	line-height: 5vh;
 	margin: 2.5vh auto;
 	color: #383E54;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .info-box p {
@@ -945,7 +959,7 @@ input::placeholder {
 }
 
 .card-logo {
-	width: 100px;
+	width: 130px;
 	margin: 0 auto
 }
 
@@ -1499,7 +1513,7 @@ input::placeholder {
 	}
 
 	.info-box {
-		width: 80%;
+		width: 60%;
 	}
 
 	.info-box .content {
@@ -1664,10 +1678,16 @@ input::placeholder {
 .cursor-bottle {
 	width: 400px;
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: -200px;
+	left: -200px;
 	display: none;
 	z-index: 6;
+	transform: scale(0);
+	transition: all 1s;
+}
+
+.scale .cursor-bottle {
+	transform: scale(1);
 }
 
 .cursor-bottle:after {
@@ -1713,4 +1733,16 @@ input::placeholder {
     z-index: 7;
 	opacity: 0.4;
 	display: none;
+}
+
+@media screen and (min-width: 1600px) {
+	.info-box {
+		width: 35%;
+	}
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) and (min-height: 900px) {
+	.info-box {
+		width: 80%;
+	}
 }
