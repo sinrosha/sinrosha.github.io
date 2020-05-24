@@ -1086,6 +1086,10 @@ input::placeholder {
 		background-size: 450%;
 	}
 
+	.card-container {
+		height: 90vh;
+	}
+	
 	.cursor-bottle {
 		width: 300px;
 		top: -200px;
