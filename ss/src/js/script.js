@@ -114,12 +114,16 @@ $(document).ready(function() {
   $("#float-moon").on("click", function() {
     $("#float-sun").parent().removeClass("active");
     $(this).parent().toggleClass("active");
+    $(".moon-overlay").toggle();
+    $(".sun-overlay").css("display", "none");
   })
 
 
   $("#float-sun").on("click", function() {
     $("#float-moon").parent().removeClass("active");
     $(this).parent().toggleClass("active");
+    $(".sun-overlay").toggle();
+    $(".moon-overlay").css("display", "none");
   })
   window.addEventListener('resize', () => {
     var floatWidth = document.querySelector(".float").offsetWidth;
@@ -331,9 +335,15 @@ setInterval(changeColor, 1000);
 $('#secret').on({
   mouseenter: function () {
     $('.cursor-bottle').fadeIn(200);
+    $(".bottle-overlay").css("display", "block");
+    $(".moon-card").addClass("low");
+    $(".sun-card").addClass("low");
   },
   mouseleave: function () {
     $('.cursor-bottle').fadeOut(200);
+    $(".bottle-overlay").css("display", "none");
+    $(".moon-card").removeClass("low");
+    $(".sun-card").removeClass("low");
   }
 });
 

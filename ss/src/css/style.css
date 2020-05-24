@@ -877,8 +877,15 @@ input::placeholder {
 	height: 100vh;
 	position: absolute;
 	left: 0;
-	transition: all 1s;
+	transition: all 0.6s;
+	z-index: 8;
 }
+
+.sun-card.low,
+.moon-card.low {
+	z-index: 3
+}
+
 
 .sun-card.active,
 .moon-card.active {
@@ -895,24 +902,25 @@ input::placeholder {
 	position: absolute;
 	top:0;
 	right: 0;
-	transition: all 1s;
+	transition: all 0.6s;
+	z-index: 8;
 }
 
 .card-container {
 	background: #fffcd5;
 	height: 95vh;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
 	position: relative;
 	padding: 60px 40px;
-
+	border: 2px solid #383e53;
 	text-align: center;
 }
 
 .moon-card .card-container {
 	border-radius: 0;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
 }
 
 .moon-card .card-container:before {
@@ -1143,6 +1151,11 @@ input::placeholder {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	#hero .main {
 		width: 100%;
+	}
+
+	.sun-card,
+	.moon-card {
+		width: 60vw;
 	}
 
 	.pop-up {
@@ -1630,7 +1643,7 @@ input::placeholder {
 	transition: all 0.6s;
 	cursor: pointer;
 	position: relative;
-	z-index: 3;
+	z-index: 7;
 }
 
 /* #secret:before {
@@ -1651,13 +1664,53 @@ input::placeholder {
 .cursor-bottle {
 	width: 400px;
 	position: absolute;
-	top: 50px;
-	left: 50px;
+	top: 0;
+	left: 0;
 	display: none;
+	z-index: 6;
+}
+
+.cursor-bottle:after {
+	content: "";
 }
 
 .cursor-bottle img {
 	width: 100%;
 	display: block;
 	border-radius: 50%;
+}
+
+#float-sun {
+	position: relative;
+	left: -1px;
+}
+
+
+#float-moon {
+	position: relative;
+	right: -1px;
+}
+
+.bottle-overlay {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+	z-index: 5;
+	opacity: 0.4;
+	display: none;
+}
+
+.moon-overlay, .sun-overlay {
+	position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 7;
+	opacity: 0.4;
+	display: none;
 }
