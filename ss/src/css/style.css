@@ -1090,8 +1090,9 @@ input::placeholder {
 	}
 
 	.cursor-bottle {
-		width: 300px;
+		width: 250px;
 		top: -200px;
+		left: 0;
 	}
 
 	.moon-card .card-container {
