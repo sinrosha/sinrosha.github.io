@@ -115,7 +115,10 @@ $(document).ready(function() {
     $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
   });
 
-  $("#float-moon").on("mouseover click", function() {
+
+
+
+  $("#float-moon").on("mouseover", function() {
     $("#float-sun").parent().removeClass("active");
     $(this).parent().toggleClass("active");
     $(".moon-overlay").toggle();
@@ -123,19 +126,23 @@ $(document).ready(function() {
   })
 
 
-  $("#float-sun").on("mouseover click", function() {
+  $("#float-sun").on("mouseover", function() {
     $("#float-moon").parent().removeClass("active");
     $(this).parent().toggleClass("active");
     $(".sun-overlay").toggle();
     $(".moon-overlay").css("display", "none");
   });
-
+    
   window.addEventListener('resize', () => {
     var floatWidth = document.querySelector(".float").offsetWidth;
     var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
     $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
     $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
   });
+
+  $(".moon-card.active .float").on("click", ".moon-card", function() {
+    $(".moon-card").removeClass("active");
+})
 
 
 
@@ -361,10 +368,12 @@ $("#secret").on("click", function() {
 });
 
 $(document).on('click', function (event) {
-  if (!$(event.target).closest('#secret').length) {
+  if (!$(event.target).closest('#secret').length && !$(event.target).closest('.card-container').length && !$(event.target).closest('.float').length) {
       $("#secret").removeClass("scale");
       $(".bottle-overlay").css("display", "none");
-      $(".moon-card").removeClass("low");
-       $(".sun-card").removeClass("low");
+      $(".moon-card").removeClass("low active");
+      $(".sun-card").removeClass("low active");
+      $(".moon-overlay").css("display", "none");
+      $(".sun-overlay").css("display", "none");
   }
 });
