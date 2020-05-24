@@ -711,7 +711,7 @@ input::placeholder {
 }
 
 .info-box {
-	width: 46%;
+	width: 42%;
     text-align: center;
     height: 95%;
     border-radius: 20px;
@@ -762,6 +762,7 @@ input::placeholder {
 
 .info-box .content {
 	width: 60vh;
+	max-width: 100%;
 	margin: 0 auto;		
 }
 
@@ -785,7 +786,7 @@ input::placeholder {
 
 .info-box h1 {
 	font-family: 'EB Garamond', serif;
-	font-size: 4.5vh;
+	font-size: 4.2vh;
 	line-height: 5vh;
 	margin: 2.5vh auto;
 	color: #383E54;
@@ -799,7 +800,7 @@ input::placeholder {
 	color: #383E54;
 	width: 90%;
 	margin: 0 auto;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 	font-weight: 600;
 }
 
@@ -935,6 +936,7 @@ input::placeholder {
 	border-radius: 0;
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
+	padding-left: 
 }
 
 .moon-card .card-container:before {
@@ -1000,6 +1002,14 @@ input::placeholder {
 @media screen and (max-width: 767px) and (min-width: 320px) {
 	#popup {
 		background-size: 450%;
+	}
+
+	.moon-card .card-container {
+		padding-left: 40px;
+	}
+
+	.sun-card .card-container {
+		padding-right: 40px;
 	}
 	
 	.book {
@@ -1071,10 +1081,31 @@ input::placeholder {
 	}
 
 	.info-box {
-		width: 80%;
+		width: 85%;
 	}
 
-	
+	.sun-card, .moon-card {
+		width: 85vw;
+	}
+
+	.card-container {
+		padding: 30px 20px;
+	}	
+
+	.card-logo {
+		width: 100px;
+	}
+
+	.card-container h3 {
+		margin: 20px 0;
+		font-size: 32px;
+	}
+
+	.card-container p {
+		width: 100%;
+		line-height: 1.6;
+		font-size: 14px;
+	}
 
 
 	.mobile {
@@ -1190,7 +1221,7 @@ input::placeholder {
 	}
 
 	.info-box {
-		width: 60%;
+		width: 55%;
 	}
 
 	.blue-frame {
@@ -1204,6 +1235,7 @@ input::placeholder {
 		left: -34px;
 		top: 52%;
 	}
+
 	
 	.frame:after {
 		right: -34px;
@@ -1517,7 +1549,7 @@ input::placeholder {
 	}
 
 	.info-box .content {
-		width: 55vh;
+		width: 60vh;
 		box-sizing: border-box;
 	}
 
