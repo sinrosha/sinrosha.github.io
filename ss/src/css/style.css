@@ -240,10 +240,12 @@ html
 
 .webp #popup {
 	background: url(../../assets/build/bg-img-popup.webp) no-repeat center center;
+	background-size: cover;
 }
 
 .no-webp #popup {
 	background: url(../../assets/img/bg-img-popup.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 .overlay {
@@ -479,10 +481,12 @@ html
 
 .webp #hero {
 	background: url(../../assets/build/bg-img-hero.webp) no-repeat center center;
+	background-size: cover;
 }
 
 .no-webp #hero {
 	background: url(../../assets/img/bg-img-hero.jpg) no-repeat center center;
+	background-size: cover;
 }
 
 #hero .main {
@@ -790,6 +794,7 @@ input::placeholder {
 	line-height: 5vh;
 	margin: 2.5vh auto;
 	color: #383E54;
+	font-style: italic;
 	font-weight: 700;
 }
 
@@ -973,7 +978,8 @@ input::placeholder {
 	font-family: 'EB Garamond', serif;
 	font-weight: 600;
 	margin: 30px 0;
-    font-size: 36px;
+	font-size: 36px;
+	font-style: italic;
 }
 
 .card-container p {
@@ -1090,9 +1096,12 @@ input::placeholder {
 	}
 
 	.cursor-bottle {
+		position: fixed;
 		width: 250px;
-		top: -200px;
-		left: 0;
+		top: 50%;
+		left: 50%;
+		margin-top: -175px;
+		margin-left: -125px;
 	}
 
 	.moon-card .card-container {
