@@ -1092,6 +1092,10 @@ input::placeholder {
 		background-size: 450%;
 	}
 
+	.choice a {
+		font-size: 16px;
+	}
+
 	.card-container {
 		height: 90vh;
 	}
