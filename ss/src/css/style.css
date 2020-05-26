@@ -454,7 +454,6 @@ html
 
 .choice p {
 	font-family: 'EB Garamond', serif;
-	;
 	font-weight: 600;
 	font-size: 16px;
 	font-style: italic;
@@ -742,7 +741,6 @@ input::placeholder {
 	width: 250px;
 	margin: 2vh auto;
 	margin-top: 8vh;
-	display: none;
 }
 
 
@@ -757,7 +755,7 @@ input::placeholder {
 .social-icons svg {
 	width: 3.5vh;
 	height: 3.5vh;
-	fill: #e5be00;
+	fill: #383e54;
 }
 
 .social-icons .icon {
@@ -766,7 +764,7 @@ input::placeholder {
 }
 
 .info-box .content {
-	width: 60vh;
+	width: 70vh;
 	max-width: 100%;
 	margin: 0 auto;		
 }
@@ -800,7 +798,7 @@ input::placeholder {
 }
 
 .info-box p {
-	line-height: 3.2vh;
+	line-height: 3vh;
 	font-size: 1.9vh;
 	font-family: 'Raleway', sans-serif;
 	color: #383E54;
@@ -999,9 +997,7 @@ input::placeholder {
 
 
 
-.info-box .content {
-	margin-top: 8vh;
-}
+
 
 #secret {
 	transition: all 0.6s;
@@ -1094,7 +1090,7 @@ input::placeholder {
 	}
 
 	.choice a {
-		font-size: 16px;
+		font-size: 14px;
 	}
 
 	.card-container {
@@ -1187,7 +1183,7 @@ input::placeholder {
 	}
 
 	.info-box {
-		width: 85%;
+		width: 90%;
 	}
 
 	.sun-card, .moon-card {
@@ -1302,6 +1298,10 @@ input::placeholder {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 	#hero .main {
 		width: 100%;
+	}
+
+	.social-icons {
+		margin-top: 6vh;
 	}
 
 	.sun-card,
@@ -1655,7 +1655,7 @@ input::placeholder {
 	}
 
 	.info-box .content {
-		width: 60vh;
+		width: 70vh;
 		box-sizing: border-box;
 	}
 
@@ -1668,11 +1668,17 @@ input::placeholder {
 		margin-left: -10vh;
 	}
 
-	.info-box .content {
-		width: 90%;
+	.social-icons .icon,
+	.social-icons svg {
+		width: 2.5vh;
+		height: 2.5vh;
 	}
 
-	.social-icons, .info-box .content {
+	.info-box .content {
+		width: 95%;
+	}
+
+	.social-icons {
 		margin-top: 7vh;
 	}
 
@@ -1685,7 +1691,8 @@ input::placeholder {
 	.info-box p {
 		line-height: 2.5vh;
 		font-size: 1.6vh;
-		width: 100%;
+		width: 95%;
+		margin-bottom: 10px;
 	}
 
 	.label-new {
