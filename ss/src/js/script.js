@@ -118,7 +118,7 @@ $(document).ready(function() {
 
 
 
-  $("#float-moon").on("mouseover", function() {
+  $("#float-moon").on("click", function() {
     $("#float-sun").parent().removeClass("active");
     $(this).parent().toggleClass("active");
     $(".moon-overlay").toggle();
@@ -126,7 +126,7 @@ $(document).ready(function() {
   })
 
 
-  $("#float-sun").on("mouseover", function() {
+  $("#float-sun").on("click", function() {
     $("#float-moon").parent().removeClass("active");
     $(this).parent().toggleClass("active");
     $(".sun-overlay").toggle();
@@ -359,12 +359,12 @@ setInterval(changeColor, 1000);
 //   }
 // });
 
-$("#secret").on("click", function() {
+$("#secret").on("mouseover", function() {
   $('.cursor-bottle').fadeIn(200);
   $(".bottle-overlay").css("display", "block");
+  $(this).addClass("scale");
   $(".moon-card").addClass("low");
   $(".sun-card").addClass("low");
-  $(this).addClass("scale");
 });
 
 $(document).on('click', function (event) {

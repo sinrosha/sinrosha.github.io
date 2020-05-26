@@ -801,7 +801,7 @@ input::placeholder {
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 15px;
-	font-weight: 600;
+	font-weight: 500;
 }
 
 .info-box p:last-child {
@@ -1001,6 +1001,7 @@ input::placeholder {
 	cursor: pointer;
 	position: relative;
 	z-index: 7;
+	font-weight: 600;
 }
 
 /* #secret:before {
@@ -1026,7 +1027,7 @@ input::placeholder {
 	display: none;
 	z-index: 6;
 	transform: scale(0);
-	transition: all 1s;
+	transition: all 0.7s;
 }
 
 .scale .cursor-bottle {
