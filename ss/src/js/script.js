@@ -80,7 +80,7 @@ $(document).ready(function() {
      if(val && isEmail(val)) {
          $(".submit-msg-new").css("padding", "0");
          $("body").addClass("sent");
-         $(".frame-new").css("background", "none")
+         $(".frame-new").css({"background": "none", "background-color": "#fffbd4;"});
 	 $(".submit-new, label, input").fadeOut();
      $('#email').css("border","0 solid red");
        $.ajax({

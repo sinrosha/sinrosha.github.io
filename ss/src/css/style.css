@@ -805,7 +805,7 @@ input::placeholder {
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 15px;
-	font-weight: 500;
+	font-weight: 600;
 }
 
 .info-box p:last-child {
@@ -1004,7 +1004,7 @@ input::placeholder {
 	cursor: pointer;
 	position: relative;
 	z-index: 7;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 /* #secret:before {
@@ -1020,6 +1020,19 @@ input::placeholder {
 
 .float {
 	width: 180px;
+	animation: 700ms linear 0s infinite alternate none running pulse;
+}
+
+.active .float {
+	animation: none;
+}
+
+.sent .frame-new {
+	background-color: #fffbd4!important;
+}
+
+.sent .container-frame {
+	margin-top: 0;
 }
 
 .cursor-bottle {
