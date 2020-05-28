@@ -229,6 +229,63 @@ html
 	background: #000!important;
 }
 
+.landscape #popup,
+.landscape #hero {
+	display: none!important;
+}
+
+.landscape #land-view {
+	height: 85vh;
+    display: flex!important;
+	align-items: center;
+	position: relative;
+}
+
+.landscape #land-view:before {
+	content: "";
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    top: 8px;
+    border: 2px solid #383e54;
+    border-radius: 15px;
+}
+
+.landscape .info-box p {
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+}
+
+.mobile-land {
+	height: 100vh;
+    display: flex;
+	align-items: center;
+	background: url(../../assets/build/bg-img-popup.webp) no-repeat center center;
+	background-size: cover;
+	display: none;
+}
+
+.landscape .mobile-land {
+	display: flex;
+}
+
+.webp .mobile-land {
+	background: url(../../assets/build/bg-img-popup.webp) no-repeat center center;
+    background-size: cover;
+}
+
+.no-js .mobile-land,
+.no-webp .mobile-land {
+	background: url(../../assets/img/bg-img-popup.jpg) no-repeat center center;
+	background-size: cover;
+}
+
+
+.portrait #land-view {
+	display: none;
+}
+
 #popup {
 	height: 100vh;
 	width: 100vw;
@@ -1102,6 +1159,10 @@ input::placeholder {
 		background-size: 450%;
 	}
 
+	.float {
+		width: 150px;
+	}
+
 	.choice a {
 		font-size: 14px;
 	}
@@ -1120,11 +1181,13 @@ input::placeholder {
 	}
 
 	.moon-card .card-container {
-		padding-left: 40px;
+		padding: 20px;
+		padding-left: 30px;
 	}
 
 	.sun-card .card-container {
-		padding-right: 40px;
+		padding: 20px;
+		padding-right: 30px;
 	}
 	
 	.book {
@@ -1208,18 +1271,20 @@ input::placeholder {
 	}	
 
 	.card-logo {
-		width: 100px;
+		width: 70px;
 	}
 
 	.card-container h3 {
-		margin: 20px 0;
-		font-size: 32px;
+		margin: 10px 0;
+		font-size: 26px;
 	}
 
 	.card-container p {
 		width: 100%;
 		line-height: 1.6;
 		font-size: 14px;
+		line-height: 2.5vh;
+		font-size: 1.6vh;
 	}
 
 
@@ -1681,6 +1746,14 @@ input::placeholder {
 		margin-left: -10vh;
 	}
 
+	.hero-text {
+		height: 35vh;
+		overflow: auto;
+		border: 2px solid #4f5463;
+		border-radius: 7px;
+		padding: 10px;
+	}
+
 	.social-icons .icon,
 	.social-icons svg {
 		width: 2.5vh;
@@ -1689,6 +1762,8 @@ input::placeholder {
 
 	.info-box .content {
 		width: 95%;
+		position: relative;
+		z-index:7;
 	}
 
 	.social-icons {
@@ -1750,8 +1825,8 @@ input::placeholder {
 	}
 
 	.container-form {
-		margin: 0 auto
-		;
+		margin: 0 auto;
+		width: 60px;
 	}
 
 	.container-frame {

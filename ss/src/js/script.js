@@ -15,12 +15,14 @@ $(document).ready(function() {
     var floatWidth = document.querySelector(".float").offsetWidth;
     var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
     console.log("Flaot Width", floatWidth, "ContainerWidth", containerWidth);
-    $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
-    $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+    
 		
        $("#popup").fadeOut(1000, function() {
        	  $(".before-hero").fadeIn(2000).css("display", "flex");
-          $(".info-box").fadeIn(2000);
+          $(".info-box").fadeIn(2000, function() {
+            $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
+            $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+          });
        });
        $("#hero").css("display", "flex");
        e.preventDefault();
@@ -108,15 +110,30 @@ $(document).ready(function() {
   // $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
   // $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
 
+  var mq = window.matchMedia( "(max-width: 768px)" );
   window.addEventListener('resize', () => {
     var floatWidth = document.querySelector(".float").offsetWidth;
     var containerWidth = document.querySelector(".card-container").offsetWidth + 6;
     $(".sun-card").css({ transform: `translateX(${-containerWidth}px)`});
     $(".moon-card").css({ transform: `translateX(${containerWidth}px)`});
+    if(window.innerHeight > window.innerWidth && mq.matches){ 
+      $("html").addClass("portrait");
+      $("html").removeClass("landscape");
+     } else if(mq.matches) {
+      $("html").removeClass("portrait");
+      $("html").addClass("landscape");
+     }
   });
 
+  if(window.innerHeight > window.innerWidth && mq.matches) { 
+      $("html").addClass("portrait");
+      
+  } else if(mq.matches) {
+      $("html").addClass("landscape");
+  }
+  
 
-
+    
 
   $("#float-moon").on("click", function() {
     $("#float-sun").parent().removeClass("active");
