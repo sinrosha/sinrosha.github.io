@@ -1159,6 +1159,14 @@ input::placeholder {
 		background-size: 450%;
 	}
 
+	.webp #popup  {
+		background-position: center right;
+	}
+
+	.no-webp .webp #popup  {
+		background-position: center right;
+	}
+
 	.float {
 		width: 150px;
 	}
