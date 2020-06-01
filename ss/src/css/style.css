@@ -253,7 +253,8 @@ html
 }
 
 .landscape .info-box p {
-    font-size: 20px;
+	font-size: 20px;
+	line-height: 1.2;
     font-family: 'EB Garamond', serif;
 }
 
