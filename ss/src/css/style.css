@@ -357,6 +357,11 @@ html
 	margin-left: 10px;
 }
 
+.container-frame {
+	position: relative;
+	z-index: 6;
+}
+
 .sent .container-frame .aspect-ratio-box:after, 
 .sent .container-frame .aspect-ratio-box:before {
     display: none;
@@ -1099,10 +1104,9 @@ input::placeholder {
     z-index: 6;
     transform: scale(0);
     position: fixed;
-    top: 50%;
+    top: 10%;
 	left: 50%;
 	transform: scale(0);
-    margin-top: -210px;
 	margin-left: -210px;
 	transition: all 0.7s;
 }

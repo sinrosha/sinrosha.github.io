@@ -364,7 +364,7 @@ $(".eye-new").on("mouseleave", function() {
 //   }
 // });
 
-$("#top-secret").on("click", function() {
+$(".eye-new").on("click", function() {
   $('.cursor-bottle').fadeIn(200);
   $(".bottle-overlay").css("display", "block");
   $("#secret").addClass("scale");
@@ -373,7 +373,7 @@ $("#top-secret").on("click", function() {
 });
 
 $(document).on('click', function (event) {
-  if (!$(event.target).closest('#top-secret').length && !$(event.target).closest('.card-container').length && !$(event.target).closest('.float').length) {
+  if (!$(event.target).closest('.eye-new').length && !$(event.target).closest('.card-container').length && !$(event.target).closest('.float').length) {
       $("#secret").removeClass("scale");
       $(".bottle-overlay").css("display", "none");
       $(".moon-card").removeClass("low active");
