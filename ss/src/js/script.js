@@ -345,19 +345,7 @@ $(".eye-new").on("mouseleave", function() {
 // }
 
 
-var colors = ["#383E54", "#9D402F"]
-var currentColor = 0
-var lis = document.querySelectorAll("#secret")
 
-function changeColor() {
-  --currentColor
-  if (currentColor < 0) currentColor = colors.length -1
-  for (var i = 0; i < lis.length; i++) {
-    lis[i].style.color = colors[(currentColor +i) % colors.length]
-  }
-}
-
-setInterval(changeColor, 1000);
 
 
 
@@ -376,16 +364,16 @@ setInterval(changeColor, 1000);
 //   }
 // });
 
-$("#secret").on("mouseover", function() {
+$("#top-secret").on("click", function() {
   $('.cursor-bottle').fadeIn(200);
   $(".bottle-overlay").css("display", "block");
-  $(this).addClass("scale");
+  $("#secret").addClass("scale");
   $(".moon-card").addClass("low");
   $(".sun-card").addClass("low");
 });
 
 $(document).on('click', function (event) {
-  if (!$(event.target).closest('#secret').length && !$(event.target).closest('.card-container').length && !$(event.target).closest('.float').length) {
+  if (!$(event.target).closest('#top-secret').length && !$(event.target).closest('.card-container').length && !$(event.target).closest('.float').length) {
       $("#secret").removeClass("scale");
       $(".bottle-overlay").css("display", "none");
       $(".moon-card").removeClass("low active");
