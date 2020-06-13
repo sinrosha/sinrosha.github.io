@@ -1785,7 +1785,7 @@ input::placeholder {
 		    color: #383E54;
 		    font-size: 14px;
 		    padding: 8px 0;
-		    font-weight: 600;
+		    font-weight: 400;
 		}
 
 		.input-new[type="text"] {

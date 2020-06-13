@@ -398,7 +398,6 @@ $(".eye-new").on("click", function() {
   $('.cursor-bottle').fadeIn(200);
   $(".bottle-overlay").css("display", "block");
   $(".blue-frame .content, .social-icons").animate({opacity: "0"}, function() {
-    $(".info-box h1").fadeOut().animate({opacity: "0"});
     $(".blue-frame").addClass("scale");
   });
   // $(".moon-card").addClass("low");
@@ -408,9 +407,7 @@ $(".eye-new").on("click", function() {
 $("#cancel").on("click", function() {
   $(".blue-frame").removeClass("scale");
   $(".container-frame, .action-buttons").fadeOut().animate({opacity: "0"}, 100, function() {
-    $(".info-box h1").fadeIn().animate({opacity: "1"}, function() {
       $(".blue-frame .content, .social-icons").animate({opacity: "1"}, 100);
-    });
     $(".container-form").fadeIn("100").animate({opacity: "1"}, 100);
   });
 });
