@@ -239,9 +239,11 @@ html
     display: flex!important;
 	align-items: center;
 	position: relative;
+	background: transparent;
+	border: 0;
 }
 
-.landscape #land-view:before {
+/* .landscape #land-view:before {
 	content: "";
     position: absolute;
     left: 8px;
@@ -250,13 +252,26 @@ html
     top: 8px;
     border: 2px solid #383e54;
     border-radius: 15px;
-}
+} */
 
 .landscape .info-box p {
 	font-size: 20px;
 	line-height: 1.2;
 	font-family: 'EB Garamond', serif;
-	width: 80%;
+	width: 100%;
+	color: #fffbd4;
+	font-weight: 400;
+}
+
+section.mobile-land:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.4;
 }
 
 .mobile-land {
