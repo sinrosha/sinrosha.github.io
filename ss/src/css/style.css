@@ -1871,8 +1871,16 @@ input::placeholder {
 		margin-left: -10vh;
 	}
 
+	.punchline p {
+		font-size: 26px;
+	}
+
+	.punchline .punchline-img {
+		width: 120px;
+	}
+
 	.hero-text {
-		height: 35vh;
+		height: 35vh;	
 		overflow: auto;
 		border: 2px solid #4f5463;
 		border-radius: 7px;
@@ -2011,6 +2019,12 @@ input::placeholder {
 	}
 }
 
+@media screen and (max-width: 1024px) {
+	.info-box h1{
+		display: block!important;
+	}
+}
+
 
 @media screen and (min-width: 1600px) {
 	.info-box {
@@ -2021,5 +2035,44 @@ input::placeholder {
 @media screen and (max-width: 1200px) and (min-width: 768px) and (min-height: 900px) {
 	.info-box {
 		width: 80%;
+	}
+}
+
+@media screen and (max-width: 420px) {
+	.punchline p {
+		font-size: 22px;
+	}
+
+	.punchline-wrapper {
+		padding-bottom: 30px;
+	}
+
+	.punchline .punchline-img {
+		width: 100px;
+		margin: 20px auto;
+	}
+
+	.cursor-bottle {
+		position: fixed;
+		width: 200px;
+		top: 50%;
+		left: 50%;
+		margin-top: -150px;
+		margin-left: -100px;
+	}
+
+	.aspect-ratio-box, 
+	.eye-new, .frame-new {
+		height: 100px;
+	}
+
+	.form-new {
+		bottom: 28px;
+	}
+
+	.action-buttons a {
+		padding: 3px 20px;
+		margin: 0 10px;
+		font-size: 12px;
 	}
 }

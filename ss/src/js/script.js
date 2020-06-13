@@ -246,14 +246,14 @@ window.addEventListener('resize', () => {
 
 
 
-if($(window).width() <= 768){
-  $("#email").on("focus", function() {
-    $(".content").fadeOut();
-  });
-  $("#email").on("focusout", function() {
-    $(".content").fadeIn();
-  });
-}
+// if($(window).width() <= 768){
+//   $("#email").on("focus", function() {
+//     $(".content").fadeOut();
+//   });
+//   $("#email").on("focusout", function() {
+//     $(".content").fadeIn();
+//   });
+// }
 
 // Test JS
 
@@ -401,8 +401,8 @@ $(".eye-new").on("click", function() {
     $(".info-box h1").fadeOut().animate({opacity: "0"});
     $(".blue-frame").addClass("scale");
   });
-  $(".moon-card").addClass("low");
-  $(".sun-card").addClass("low"); 
+  // $(".moon-card").addClass("low");
+  // $(".sun-card").addClass("low"); 
 });
 
 $("#cancel").on("click", function() {
